@@ -1,3 +1,3 @@
-import About from './About'
+import About from './loadable'
 
 export default About

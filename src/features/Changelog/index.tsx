@@ -1,3 +1,3 @@
-import About from './Changelog'
+import Changelog from './loadable'
 
-export default About
+export default Changelog

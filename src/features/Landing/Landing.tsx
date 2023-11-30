@@ -1,5 +1,4 @@
 import { FC, useEffect } from 'react'
-import { Style } from 'node_modules/react-loader-spinner/dist/type'
 
 import { Grid as LoadingSpinner } from 'react-loader-spinner'
 
@@ -8,6 +7,8 @@ import Adminis from 'src/shared/components/Adminis'
 import ScrambleText from 'src/shared/components/ScrambleText'
 
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
+
+import { colors } from 'src/theme'
 
 import { fetchGithubReposStart } from './redux/landingActions'
 import {
@@ -25,12 +26,11 @@ import {
   LandingPageSubtitle,
   LandingPageTitle,
 } from './styledComponents'
-import { colors } from 'src/theme'
 
 const subtitle = 'Administrate you.'
 const underConstruction = 'Under Construction (・-・)7'
 
-const loadingStyles: Style = {
+const loadingStyles = {
   width: '100%',
   height: '100%',
   justifyContent: 'center',
