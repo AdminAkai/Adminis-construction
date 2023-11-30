@@ -9,8 +9,4 @@ export const allNavbarOptions: AllNavbarOptionsType = [
     label: 'About',
     route: '/about',
   },
-  {
-    label: 'Changelog',
-    route: '/changelog',
-  },
 ]
