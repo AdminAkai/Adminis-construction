@@ -10,7 +10,6 @@ export const LandingPageContainer = styled.div`
   align-items: center;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
-    height: 100vh;
     padding: 1.5rem;
     flex-direction: column;
     justify-content: flex-start;
