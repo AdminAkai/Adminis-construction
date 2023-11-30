@@ -9,10 +9,9 @@ import { useAppDispatch } from 'src/shared/redux/store'
 
 import { fetchChangelogStart } from './redux/changelogActions'
 
-import { logs, sourceCodeLink } from './lib'
+import { sourceCodeLink } from './lib'
 
 import {
-  ChangelogBulletPoint,
   ChangelogContainer,
   ChangelogHeader,
   ChangelogSubtitle,
