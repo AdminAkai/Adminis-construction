@@ -3,9 +3,9 @@ import { FC, useEffect } from 'react'
 import CustomLink from 'src/shared/components/CustomLink'
 import ScrambleText from 'src/shared/components/ScrambleText'
 
-import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
-import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
-import { Language } from 'src/shared/redux/settingsSlice/initialState'
+import { useAppDispatch } from 'src/shared/redux/store'
+// import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
+// import { Language } from 'src/shared/redux/settingsSlice/initialState'
 
 import { fetchChangelogStart } from './redux/changelogActions'
 
@@ -24,7 +24,7 @@ const subtitle = 'Source Code:'
 const Changelog: FC = () => {
   const dispatch = useAppDispatch()
 
-  const language: Language = useAppSelector(selectLanguage)
+  // const language: Language = useAppSelector(selectLanguage)
 
   useEffect(() => {
     dispatch(fetchChangelogStart())
@@ -42,11 +42,6 @@ const Changelog: FC = () => {
           <ScrambleText text={sourceCodeLink} />
         </CustomLink>
       </ChangelogSubtitle>
-      {logs.map((log) =>
-        log[language].map((text, index) => (
-          <ChangelogBulletPoint key={index}>{text}</ChangelogBulletPoint>
-        ))
-      )}
     </ChangelogContainer>
   )
 }

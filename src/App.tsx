@@ -7,7 +7,7 @@ import { useAppSelector } from 'src/shared/redux/store'
 import Main from 'src/features/Main'
 import Landing from 'src/features/Landing'
 import About from 'src/features/About'
-import Changelog from './features/Changelog'
+// import Changelog from './features/Changelog'
 
 import theme from './theme'
 
@@ -21,7 +21,6 @@ function App() {
           <Route path='/' element={<Main />}>
             <Route index element={<Landing />} />
             <Route path='/about' element={<About />} />
-            <Route path='/changelog' element={<Changelog />} />
           </Route>
         </Routes>
       </BrowserRouter>
