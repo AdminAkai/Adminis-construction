@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { Mode } from 'src/shared/redux/settingsSlice/initialState'
 
-import theme from 'src/theme'
+import theme from 'src/shared/lib/theme'
 
 interface IMoonIconProps {
   mode: Mode

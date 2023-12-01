@@ -8,7 +8,7 @@ import '@testing-library/jest-dom'
 import store from 'src/shared/redux/store.ts'
 
 import Navbar from '../Navbar.tsx'
-import theme from 'src/theme.ts'
+import theme from 'src/shared/lib/theme.ts'
 
 describe('Navbar tests', () => {
   it('Make sure all Navbar Options are available', () => {

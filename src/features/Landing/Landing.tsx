@@ -8,7 +8,7 @@ import ScrambleText from 'src/shared/components/ScrambleText'
 
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 
-import { colors } from 'src/theme'
+import { colors } from 'src/shared/lib/theme'
 
 import { fetchGithubReposStart } from './redux/landingActions'
 import {

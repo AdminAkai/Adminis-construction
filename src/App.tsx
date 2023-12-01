@@ -8,7 +8,8 @@ import Main from 'src/features/Main'
 import Landing from 'src/features/Landing'
 import About from 'src/features/About'
 
-import theme from './theme'
+import theme from './shared/lib/theme'
+import GlobalStyle from './shared/lib/globalStyles'
 
 function App() {
   const mode = useAppSelector(selectMode)
@@ -16,6 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={theme[mode]}>
       <BrowserRouter>
+        <GlobalStyle />
         <Routes>
           <Route path='/' element={<Main />}>
             <Route index element={<Landing />} />
