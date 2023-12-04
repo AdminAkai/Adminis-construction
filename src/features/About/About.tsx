@@ -47,10 +47,11 @@ const About: FC = () => {
         <AboutSummaryHeader>Under Construction</AboutSummaryHeader>
         <AboutSummaryText>
           I am currently rebuilding Adminis to use ThreeJS for WebGL and 3D
-          rendering while not sacrificing any of its current accessibility, as
-          well as working on a ton of personal projects. I&apos;ll set them so
-          you can view them here, but they&apos;ll also be available on my
-          Github (the source code for this site is also there). Stay tuned!
+          rendering using React Three Fiber, while also not sacrificing any of
+          its current accessibility, as well as working on a ton of personal
+          projects. I&apos;ll set them so you can view them here, but
+          they&apos;ll also be available on my Github (the source code for this
+          site is also there). Stay tuned!
         </AboutSummaryText>
       </section>
       <Grid panels={GridItems.length}>
