@@ -5,7 +5,10 @@ import GridPanel from 'src/shared/components/GridPanel'
 import Adminis from 'src/shared/components/Adminis'
 import PanelDescription from 'src/shared/components/PanelDescription'
 
-import { GridItems, aboutSummaries } from './lib'
+import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
+import { useAppSelector } from 'src/shared/redux/store'
+
+import { GridItems, JoshTrinidadPDF, aboutSummaries } from './lib'
 import {
   AboutContainer,
   AboutHeader,
@@ -14,12 +17,9 @@ import {
   AboutSummaryText,
 } from './styledComponents'
 
-const JoshTrinidadPDF = new URL(
-  'src/assets/JoshTrinidadResume.pdf',
-  import.meta.url
-).href
-
 const About: FC = () => {
+  const lang = useAppSelector(selectLanguage)
+
   return (
     <AboutContainer>
       <section>
@@ -28,8 +28,8 @@ const About: FC = () => {
         </AboutHeader>
         {aboutSummaries.map(({ header, summary }) => (
           <>
-            <AboutSummaryHeader>{header.en}</AboutSummaryHeader>
-            <AboutSummaryText>{summary.en}</AboutSummaryText>
+            <AboutSummaryHeader>{header[lang]}</AboutSummaryHeader>
+            <AboutSummaryText>{summary[lang]}</AboutSummaryText>
           </>
         ))}
       </section>
