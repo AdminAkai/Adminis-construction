@@ -8,7 +8,7 @@ import PanelDescription from 'src/shared/components/PanelDescription'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
 import { useAppSelector } from 'src/shared/redux/store'
 
-import { GridItems, JoshTrinidadPDF, aboutSummaries } from './lib'
+import { GridItems, aboutSummaries } from './lib'
 import {
   AboutContainer,
   AboutHeader,
@@ -16,6 +16,11 @@ import {
   AboutSummaryHeader,
   AboutSummaryText,
 } from './styledComponents'
+
+export const JoshTrinidadPDF = new URL(
+  'src/assets/JoshTrinidadResume.pdf',
+  import.meta.url
+).href
 
 const About: FC = () => {
   const lang = useAppSelector(selectLanguage)

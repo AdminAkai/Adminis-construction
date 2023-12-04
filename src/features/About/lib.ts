@@ -1,11 +1,6 @@
 import CustomLink from 'src/shared/components/CustomLink'
 import { GridItemsType } from 'src/shared/types'
 
-export const JoshTrinidadPDF = new URL(
-  'src/assets/JoshTrinidadResume.pdf',
-  import.meta.url
-).href
-
 export const GridItems: GridItemsType = [
   {
     name: 'LinkedIn',
