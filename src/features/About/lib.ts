@@ -23,12 +23,49 @@ export const GridItems: GridItemsType = [
   },
 ]
 
-export const AboutText = {
-  summary: `I made Adminis to demonstrate where innovation and passion meet
-    technology. I'm Josh Trinidad, the driving force behind this
-    one-man-army company. My journey in the world of programming started
-    in highschool, and I've been doing it professionally for a little
-    over 8 years now. Over time, I've honed my skills, staying
-    forefront of industry trends and best practices. I love to learn, and
-    programming never stops teaching.`,
-}
+export const aboutSummaries = [
+  {
+    header: {
+      en: 'Meet the Founder, CEO, and CTO',
+      jp: '',
+    },
+    summary: {
+      en: `I made Adminis to demonstrate where innovation and passion meet
+      technology. I'm Josh Trinidad, the driving force behind this
+      one-man-army company. My journey in the world of programming started
+      in highschool, and I've been doing it professionally for a little
+      over 9 years now. Over time, I've honed my skills, staying
+      forefront of industry trends and best practices. I love to learn, and
+      programming never stops teaching.`,
+      jp: '',
+    },
+  },
+  {
+    header: {
+      en: `Let' Work Together`,
+      jp: '',
+    },
+    summary: {
+      en: `Reach out and contact me, either as Adminis or Josh, and let's
+      work together. Whether it's the next big thing you want to build
+      from the ground up, or just a job position that needs filling,
+      I'm available for all. Click on any of the panels to get to know
+      more about me and to get started.`,
+      jp: '',
+    },
+  },
+  {
+    header: {
+      en: `Let' Work Together`,
+      jp: '',
+    },
+    summary: {
+      en: `Reach out and contact me, either as Adminis or Josh, and let's
+        work together. Whether it's the next big thing you want to build
+        from the ground up, or just a job position that needs filling,
+        I'm available for all. Click on any of the panels to get to know
+        more about me and to get started.`,
+      jp: '',
+    },
+  },
+]
