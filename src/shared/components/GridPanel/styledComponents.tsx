@@ -6,7 +6,6 @@ export const GridPanelBox = styled(motion.div)`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.Adminis};
   font-size: 1.5rem;
   padding: 1.5rem;

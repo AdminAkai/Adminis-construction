@@ -9,4 +9,5 @@ export const LanguageIcon = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 1.4375rem;
+  cursor: pointer;
 `

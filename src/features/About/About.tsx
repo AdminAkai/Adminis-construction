@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Variants, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import Grid from 'src/shared/components/Grid'
 import GridPanel from 'src/shared/components/GridPanel'
@@ -10,7 +10,13 @@ import { Language } from 'src/shared/redux/settingsSlice/initialState'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
 import { useAppSelector } from 'src/shared/redux/store'
 
-import { GridItems, aboutSummaries } from './lib'
+import {
+  GridItems,
+  PageHeader,
+  aboutSummaries,
+  resumeDesc,
+  variants,
+} from './lib'
 import {
   AboutContainer,
   AboutHeader,
@@ -25,21 +31,6 @@ export const JoshTrinidadPDF = new URL(
   import.meta.url
 ).href
 
-const variants: Variants = {
-  initial: {
-    opacity: 0,
-    y: 50,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: 'easeInOut',
-    },
-  },
-}
-
 const About: FC = () => {
   const lang: Language = useAppSelector(selectLanguage)
 
@@ -51,7 +42,8 @@ const About: FC = () => {
     >
       <AboutInfo>
         <AboutHeader>
-          <motion.span variants={variants}>About</motion.span> <Adminis />
+          <motion.span variants={variants}>{PageHeader[lang]}</motion.span>{' '}
+          <Adminis />
         </AboutHeader>
         {aboutSummaries.map(({ header, summary }) => (
           <motion.div key={header.en} variants={variants}>
@@ -64,16 +56,14 @@ const About: FC = () => {
         {GridItems.map(({ name, description, props, Link }, index) => (
           <GridPanel key={`${name}-${index}`}>
             <Link {...props}>{name}</Link>
-            <PanelDescription>{description}</PanelDescription>
+            <PanelDescription>{description[lang]}</PanelDescription>
           </GridPanel>
         ))}
         <GridPanel>
           <AboutResume href={JoshTrinidadPDF} download='JoshTrinidadResume.pdf'>
             Resume
           </AboutResume>
-          <PanelDescription>
-            My Resume, for those that like to personally download my data
-          </PanelDescription>
+          <PanelDescription>{resumeDesc[lang]}</PanelDescription>
         </GridPanel>
       </Grid>
     </AboutContainer>

@@ -7,6 +7,8 @@ import Adminis from 'src/shared/components/Adminis'
 import ScrambleText from 'src/shared/components/ScrambleText'
 
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
+import { Language } from 'src/shared/redux/settingsSlice/initialState'
+import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
 
 import { colors } from 'src/shared/lib/theme'
 
@@ -18,6 +20,7 @@ import {
 
 import ProjectCard from './ProjectCard'
 
+import { subtitle, underConstruction } from './lib'
 import {
   LandingPageConstruction,
   LandingPageContainer,
@@ -26,9 +29,6 @@ import {
   LandingPageSubtitle,
   LandingPageTitle,
 } from './styledComponents'
-
-const subtitle = 'Administrate you.'
-const underConstruction = 'Under Construction (・-・)7'
 
 const loadingStyles = {
   width: '100%',
@@ -42,6 +42,7 @@ const Landing: FC = () => {
 
   const githubRepos: any[] = useAppSelector(selectGithubRepos)
   const loading: boolean = useAppSelector(selectLandingLoading)
+  const lang: Language = useAppSelector(selectLanguage)
 
   useEffect(() => {
     dispatch(fetchGithubReposStart())
@@ -55,10 +56,10 @@ const Landing: FC = () => {
         </LandingPageTitle>
         <LandingPageSubtext>
           <LandingPageSubtitle>
-            <ScrambleText text={subtitle} />
+            <ScrambleText text={subtitle[lang]} />
           </LandingPageSubtitle>
           <LandingPageConstruction>
-            <ScrambleText text={underConstruction} />
+            <ScrambleText text={underConstruction[lang]} />
           </LandingPageConstruction>
         </LandingPageSubtext>
       </LandingPageLogo>

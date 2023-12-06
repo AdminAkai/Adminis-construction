@@ -46,7 +46,7 @@ export const useHackerScramble = (initialWord: string): string => {
       setStart(true)
     }
     return () => clearInterval(interval)
-  }, [start])
+  }, [start, initialWord])
 
   return word
 }
