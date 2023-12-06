@@ -56,15 +56,16 @@ export const aboutSummaries = [
   },
   {
     header: {
-      en: `Let' Work Together`,
+      en: `Under Construction`,
       jp: '',
     },
     summary: {
-      en: `Reach out and contact me, either as Adminis or Josh, and let's
-        work together. Whether it's the next big thing you want to build
-        from the ground up, or just a job position that needs filling,
-        I'm available for all. Click on any of the panels to get to know
-        more about me and to get started.`,
+      en: `I am currently rebuilding Adminis to use ThreeJS for WebGL and 3D
+      rendering using React Three Fiber, while also not sacrificing any of
+      its current accessibility, as well as working on a ton of personal
+      projects. I&apos;ll set them so you can view them here, but
+      they&apos;ll also be available on my Github (the source code for this
+      site is also there). Stay tuned!`,
       jp: '',
     },
   },
