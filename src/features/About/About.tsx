@@ -53,9 +53,9 @@ const About: FC = () => {
           <motion.span variants={variants}>About</motion.span> <Adminis />
         </AboutHeader>
         {aboutSummaries.map(({ header, summary }) => (
-          <motion.div key={header[lang]} variants={variants}>
-            <AboutSummaryHeader>{header[lang]}</AboutSummaryHeader>
-            <AboutSummaryText>{summary[lang]}</AboutSummaryText>
+          <motion.div key={header.en} variants={variants}>
+            <AboutSummaryHeader>{header.en}</AboutSummaryHeader>
+            <AboutSummaryText>{summary.en}</AboutSummaryText>
           </motion.div>
         ))}
       </section>
