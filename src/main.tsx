@@ -15,7 +15,6 @@ import store, { persistor } from 'src/shared/redux/store.ts'
 import App from './App.tsx'
 
 import './assets/fonts/stylesheet.css'
-
 import './main.css'
 
 const httpLink = createHttpLink({

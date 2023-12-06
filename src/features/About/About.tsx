@@ -6,6 +6,7 @@ import GridPanel from 'src/shared/components/GridPanel'
 import Adminis from 'src/shared/components/Adminis'
 import PanelDescription from 'src/shared/components/PanelDescription'
 
+import { Language } from 'src/shared/redux/settingsSlice/initialState'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
 import { useAppSelector } from 'src/shared/redux/store'
 
@@ -39,7 +40,7 @@ const variants: Variants = {
 }
 
 const About: FC = () => {
-  const lang = useAppSelector(selectLanguage)
+  const lang: Language = useAppSelector(selectLanguage)
 
   return (
     <AboutContainer

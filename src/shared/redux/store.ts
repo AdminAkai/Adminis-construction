@@ -1,4 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
+import { combineReducers } from 'redux'
+import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
+import createSagaMiddleware from '@redux-saga/core'
+import { all } from 'redux-saga/effects'
 import {
   persistStore,
   persistReducer,
@@ -9,11 +13,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist'
-import { combineReducers } from 'redux'
 import storage from 'redux-persist/lib/storage'
-import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
-import createSagaMiddleware from '@redux-saga/core'
-import { all } from 'redux-saga/effects'
 
 import landingSagas from 'src/features/Landing/redux/landingSagas'
 import landingSlice from 'src/features/Landing/redux/landingSlice'

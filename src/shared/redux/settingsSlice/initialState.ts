@@ -4,8 +4,8 @@ export enum Mode {
 }
 
 export enum Language {
-  en = 'en',
-  jp = 'jp',
+  EN = 'en',
+  JP = 'jp',
 }
 
 interface ISettingsInitialState {
@@ -15,7 +15,7 @@ interface ISettingsInitialState {
 
 const initialState: ISettingsInitialState = {
   mode: Mode.DARK,
-  language: Language.en,
+  language: Language.EN,
 }
 
 export default initialState
