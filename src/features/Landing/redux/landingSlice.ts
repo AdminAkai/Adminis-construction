@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import initialState from './initialState'
+import initialState from './landingInitial'
 
 // Slice
 const landingSlice = createSlice({

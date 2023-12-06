@@ -9,4 +9,7 @@ export default defineConfig({
       src: '/src',
     },
   },
+  build: {
+    sourcemap: true,
+  },
 })

@@ -6,8 +6,8 @@ import GridPanel from 'src/shared/components/GridPanel'
 import Adminis from 'src/shared/components/Adminis'
 import PanelDescription from 'src/shared/components/PanelDescription'
 
-import { Language } from 'src/shared/redux/settingsSlice/initialState'
-import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
+import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
+import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 import { useAppSelector } from 'src/shared/redux/store'
 
 import {

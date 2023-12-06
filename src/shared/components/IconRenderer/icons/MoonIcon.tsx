@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Mode } from 'src/shared/redux/settingsSlice/initialState'
+import { Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 import theme from 'src/shared/lib/theme'
 

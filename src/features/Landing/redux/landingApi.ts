@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client'
-import { client } from 'src/main'
+
+import { client } from 'src/App'
 
 export const fetchGithubReposCall = async () => {
   const { data } = await client.query({

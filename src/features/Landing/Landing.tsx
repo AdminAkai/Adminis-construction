@@ -7,8 +7,8 @@ import Adminis from 'src/shared/components/Adminis'
 import ScrambleText from 'src/shared/components/ScrambleText'
 
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
-import { Language } from 'src/shared/redux/settingsSlice/initialState'
-import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
+import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
+import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 
 import { colors } from 'src/shared/lib/theme'
 

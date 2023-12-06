@@ -2,7 +2,6 @@
   "compilerOptions": {
     "typeRoots": ["./node_modules/@types", "types.d.ts"],
     "composite": true,
-    "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true

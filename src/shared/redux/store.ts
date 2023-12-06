@@ -18,7 +18,7 @@ import storage from 'redux-persist/lib/storage'
 import landingSagas from 'src/features/Landing/redux/landingSagas'
 import landingSlice from 'src/features/Landing/redux/landingSlice'
 
-import settingsSlice from './settingsSlice'
+import settingsSlice from './settingsSlice/settingsSlice'
 
 const sagas = createSagaMiddleware()
 
