@@ -10,6 +10,10 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 - Added animations and Framer Motion animations
 
+- Adjusted scramble text settings
+
+- Added EN/JP language settings
+
 - Landing Page stylings changed slightly, Navbar stylings changed slightly
 
 **11/30/2023 v0.03**:
