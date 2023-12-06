@@ -8,6 +8,12 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 **11/30/2023 v0.03**:
 
+- Added animations and Framer Motion animations
+
+- Landing Page stylings changed slightly, Navbar stylings changed slightly
+
+**11/30/2023 v0.03**:
+
 - Github GraphQL API now auths properly to grab all public pinned repos
 
 - Landing Page stylings changed slightly, Navbar stylings changed slightly
