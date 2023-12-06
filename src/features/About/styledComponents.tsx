@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
   padding-left: 4rem;

@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Variants, motion } from 'framer-motion'
 
 import Grid from 'src/shared/components/Grid'
 import GridPanel from 'src/shared/components/GridPanel'
@@ -22,20 +23,39 @@ export const JoshTrinidadPDF = new URL(
   import.meta.url
 ).href
 
+const variants: Variants = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+}
+
 const About: FC = () => {
   const lang = useAppSelector(selectLanguage)
 
   return (
-    <AboutContainer>
+    <AboutContainer
+      initial='initial'
+      animate='animate'
+      transition={{ staggerChildren: 0.3 }}
+    >
       <section>
         <AboutHeader>
-          About <Adminis />
+          <motion.span variants={variants}>About</motion.span> <Adminis />
         </AboutHeader>
         {aboutSummaries.map(({ header, summary }) => (
-          <>
+          <motion.div key={header[lang]} variants={variants}>
             <AboutSummaryHeader>{header[lang]}</AboutSummaryHeader>
             <AboutSummaryText>{summary[lang]}</AboutSummaryText>
-          </>
+          </motion.div>
         ))}
       </section>
       <Grid panels={GridItems.length}>

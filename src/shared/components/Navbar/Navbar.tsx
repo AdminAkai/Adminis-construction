@@ -10,7 +10,11 @@ import { NavbarContainer, NavbarOptions } from './styledComponents'
 
 const Navbar: FC = () => {
   return (
-    <NavbarContainer>
+    <NavbarContainer
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <NavbarAdminis />
       <NavbarOptions>
         <IconRenderer />

@@ -8,7 +8,14 @@ interface IGridProps {
 
 const Grid: FC<PropsWithChildren<IGridProps>> = ({ children, panels }) => {
   return (
-    <MainGrid $gridPanels={Math.ceil(Math.sqrt(panels))}>{children}</MainGrid>
+    <MainGrid
+      $gridPanels={Math.ceil(Math.sqrt(panels))}
+      initial='initial'
+      animate='animate'
+      transition={{ staggerChildren: 0.3 }}
+    >
+      {children}
+    </MainGrid>
   )
 }
 

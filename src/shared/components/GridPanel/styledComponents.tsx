@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const GridPanelBox = styled.div`
+export const GridPanelBox = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 100%;

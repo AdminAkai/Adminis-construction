@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const MainGrid = styled.div<{ $gridPanels: number }>`
+export const MainGrid = styled(motion.div)<{ $gridPanels: number }>`
   padding: 8rem;
   height: 100%;
   width: 100%;
@@ -9,7 +10,17 @@ export const MainGrid = styled.div<{ $gridPanels: number }>`
   grid-template-rows: ${({ $gridPanels }) => `repeat(${$gridPanels / 3}, 1fr)`};
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
-  gap: 1rem;
+
+  & > div {
+    transition:
+      scale 350ms ease-in-out,
+      opacity 350ms ease-in-out;
+  }
+
+  &:has(div:hover) > div:not(:hover) {
+    scale: 0.8;
+    opacity: 0.6;
+  }
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
     text-align: center;
