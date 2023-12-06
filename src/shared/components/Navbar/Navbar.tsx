@@ -4,6 +4,7 @@ import IconRenderer from 'src/shared/components/IconRenderer'
 
 import NavbarAdminis from './NavbarAdminis'
 import NavbarOption from './NavbarOption'
+import NavLangSetting from './NavLangSetting'
 
 import { allNavbarOptions } from './lib'
 import { NavbarContainer, NavbarOptions } from './styledComponents'
@@ -17,6 +18,7 @@ const Navbar: FC = () => {
     >
       <NavbarAdminis />
       <NavbarOptions>
+        <NavLangSetting />
         <IconRenderer />
         {allNavbarOptions.map((option, i) => (
           <NavbarOption

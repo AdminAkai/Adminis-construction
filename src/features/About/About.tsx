@@ -6,14 +6,15 @@ import GridPanel from 'src/shared/components/GridPanel'
 import Adminis from 'src/shared/components/Adminis'
 import PanelDescription from 'src/shared/components/PanelDescription'
 
-// import { Language } from 'src/shared/redux/settingsSlice/initialState'
-// import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
-// import { useAppSelector } from 'src/shared/redux/store'
+import { Language } from 'src/shared/redux/settingsSlice/initialState'
+import { selectLanguage } from 'src/shared/redux/settingsSlice/selectors'
+import { useAppSelector } from 'src/shared/redux/store'
 
 import { GridItems, aboutSummaries } from './lib'
 import {
   AboutContainer,
   AboutHeader,
+  AboutInfo,
   AboutResume,
   AboutSummaryHeader,
   AboutSummaryText,
@@ -33,14 +34,14 @@ const variants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
       ease: 'easeInOut',
     },
   },
 }
 
 const About: FC = () => {
-  // const lang: Language = useAppSelector(selectLanguage)
+  const lang: Language = useAppSelector(selectLanguage)
 
   return (
     <AboutContainer
@@ -48,17 +49,17 @@ const About: FC = () => {
       animate='animate'
       transition={{ staggerChildren: 0.3 }}
     >
-      <section>
+      <AboutInfo>
         <AboutHeader>
           <motion.span variants={variants}>About</motion.span> <Adminis />
         </AboutHeader>
         {aboutSummaries.map(({ header, summary }) => (
           <motion.div key={header.en} variants={variants}>
-            <AboutSummaryHeader>{header.en}</AboutSummaryHeader>
-            <AboutSummaryText>{summary.en}</AboutSummaryText>
+            <AboutSummaryHeader>{header[lang]}</AboutSummaryHeader>
+            <AboutSummaryText>{summary[lang]}</AboutSummaryText>
           </motion.div>
         ))}
-      </section>
+      </AboutInfo>
       <Grid panels={GridItems.length}>
         {GridItems.map(({ name, description, props, Link }, index) => (
           <GridPanel key={`${name}-${index}`}>

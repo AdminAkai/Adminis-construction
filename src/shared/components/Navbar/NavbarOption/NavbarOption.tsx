@@ -3,8 +3,6 @@ import { useLocation } from 'react-router-dom'
 
 import CustomLink from 'src/shared/components/CustomLink'
 
-import { NavbarOptionContainer } from './styledComponents'
-
 interface INavbarOptionProps {
   label: string
   route: string
@@ -15,16 +13,14 @@ const NavbarOption: FC<INavbarOptionProps> = ({ label, route, ariaLabel }) => {
   const { pathname } = useLocation()
 
   return (
-    <NavbarOptionContainer>
-      <CustomLink
-        $isActive={pathname === route}
-        to={route}
-        ariaLabel={ariaLabel}
-        nav
-      >
-        {label}
-      </CustomLink>
-    </NavbarOptionContainer>
+    <CustomLink
+      $isActive={pathname === route}
+      to={route}
+      ariaLabel={ariaLabel}
+      nav
+    >
+      {label}
+    </CustomLink>
   )
 }
 

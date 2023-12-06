@@ -21,6 +21,10 @@ export const AboutContainer = styled(motion.div)`
   }
 `
 
+export const AboutInfo = styled.section`
+  width: 100vw;
+`
+
 export const AboutHeader = styled.h1`
   color: ${({ theme }) => theme.Adminis};
   margin-bottom: 1.5rem;
