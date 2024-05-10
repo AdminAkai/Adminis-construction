@@ -6,7 +6,7 @@ import {
   CallEffect,
   PutEffect,
 } from 'redux-saga/effects'
-import { AnyAction } from 'redux'
+import { UnknownAction } from 'redux'
 
 import { fetchGithubReposStart } from './landingActions'
 import {
@@ -18,7 +18,7 @@ import { fetchGithubReposCall } from './landingApi'
 
 // Worker Sagas
 function* fetchGithubRepos(): Generator<
-  CallEffect<any[]> | PutEffect<AnyAction>
+  CallEffect<unknown[]> | PutEffect<UnknownAction>
 > {
   const githubRepos: any = yield call(fetchGithubReposCall)
   yield put(setLandingLoading())
