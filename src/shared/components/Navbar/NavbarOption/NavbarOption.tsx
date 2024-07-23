@@ -3,13 +3,13 @@ import { useLocation } from 'react-router-dom'
 
 import CustomLink from 'src/shared/components/CustomLink'
 
-interface INavbarOptionProps {
+type NavbarOptionProps = {
   label: string
   route: string
   ariaLabel: string
 }
 
-const NavbarOption: FC<INavbarOptionProps> = ({ label, route, ariaLabel }) => {
+const NavbarOption: FC<NavbarOptionProps> = ({ label, route, ariaLabel }) => {
   const { pathname } = useLocation()
 
   return (

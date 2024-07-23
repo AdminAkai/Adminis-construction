@@ -4,11 +4,11 @@ import { Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 import theme from 'src/shared/lib/theme'
 
-interface ISunIconProps {
+type SunIconProps = {
   mode: Mode
 }
 
-const SunIcon: FC<ISunIconProps> = ({ mode }) => {
+const SunIcon: FC<SunIconProps> = ({ mode }) => {
   return (
     <svg
       viewBox='0 0 24 24'

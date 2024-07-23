@@ -4,11 +4,11 @@ import { Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 import theme from 'src/shared/lib/theme'
 
-interface IMoonIconProps {
+type MoonIconProps = {
   mode: Mode
 }
 
-const MoonIcon: FC<IMoonIconProps> = ({ mode }) => {
+const MoonIcon: FC<MoonIconProps> = ({ mode }) => {
   return (
     <svg
       viewBox='0 0 24 24'

@@ -1,15 +1,15 @@
 import { FC, PropsWithChildren } from 'react'
 
-import { CustomATag, ICustomATagProps } from './styledComponents'
+import { CustomATag, CustomATagProps } from './styledComponents'
 
-export interface ICustomLinkProps extends ICustomATagProps {
+export type CustomLinkProps = CustomATagProps & {
   to: string
   ariaLabel: string
   nav?: boolean
   noUnderline?: boolean
 }
 
-const CustomLink: FC<PropsWithChildren<ICustomLinkProps>> = ({
+const CustomLink: FC<PropsWithChildren<CustomLinkProps>> = ({
   $isActive,
   nav,
   noUnderline,

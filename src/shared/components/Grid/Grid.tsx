@@ -2,11 +2,11 @@ import { FC, PropsWithChildren } from 'react'
 
 import { MainGrid } from './styledComponents'
 
-interface IGridProps {
+type GridProps = {
   panels: number
 }
 
-const Grid: FC<PropsWithChildren<IGridProps>> = ({ children, panels }) => {
+const Grid: FC<PropsWithChildren<GridProps>> = ({ children, panels }) => {
   return (
     <MainGrid
       $gridPanels={Math.ceil(Math.sqrt(panels))}

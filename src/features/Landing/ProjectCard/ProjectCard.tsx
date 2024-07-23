@@ -5,13 +5,13 @@ import PanelDescription from 'src/shared/components/PanelDescription'
 
 import { ProjectCardContainer } from './styledComponents'
 
-interface IProjectCardProps {
+type ProjectCardProps = {
   name: string
   description: string
   url: string
 }
 
-const ProjectCard: FC<IProjectCardProps> = ({ name, description, url }) => {
+const ProjectCard: FC<ProjectCardProps> = ({ name, description, url }) => {
   return (
     <GridPanel>
       <ProjectCardContainer href={url} target='_blank'>

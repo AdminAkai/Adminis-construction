@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 
 import styled from 'styled-components'
 
-export interface ICustomATagProps {
+export type CustomATagProps = {
   $isActive?: boolean
   $noUnderline?: boolean
 }
 
-export const CustomATag = styled(Link)<ICustomATagProps>`
+export const CustomATag = styled(Link)<CustomATagProps>`
   &:after {
     display: block;
     content: '';

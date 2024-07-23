@@ -46,7 +46,7 @@ const Landing: FC = () => {
 
   useEffect(() => {
     dispatch(fetchGithubReposStart())
-  }, [])
+  }, [dispatch])
 
   return (
     <LandingPageContainer>
