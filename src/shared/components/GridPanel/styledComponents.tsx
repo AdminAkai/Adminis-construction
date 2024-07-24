@@ -37,7 +37,7 @@ export const GridPanelBox = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0;
+    padding: 1rem;
 
     &:hover {
       box-shadow: none;

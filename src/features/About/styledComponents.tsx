@@ -11,18 +11,21 @@ export const AboutContainer = styled(motion.div)`
   align-items: center;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
-    padding: 1.5rem;
     height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 1.5rem;
   }
 `
 
 export const AboutInfo = styled.section`
   width: 100vw;
+  @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    padding: 1.5rem;
+  }
 `
 
 export const AboutHeader = styled.h1`
