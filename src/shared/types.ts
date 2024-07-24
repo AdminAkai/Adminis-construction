@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react'
 
-import { ICustomLinkProps } from './components/CustomLink/CustomLink'
+import { CustomLinkProps } from './components/CustomLink/CustomLink'
 
 export interface languageText {
   en: string
@@ -14,7 +14,7 @@ interface GridItemObject {
     to: string
     ariaLabel: string
   }
-  Link: FC<PropsWithChildren<ICustomLinkProps>>
+  Link: FC<PropsWithChildren<CustomLinkProps>>
 }
 
 export type GridItemsType = GridItemObject[]
