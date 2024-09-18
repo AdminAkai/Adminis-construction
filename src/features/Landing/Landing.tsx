@@ -4,7 +4,6 @@ import { Grid as LoadingSpinner } from 'react-loader-spinner'
 
 import Grid from 'src/shared/components/Grid'
 import Adminis from 'src/shared/components/Adminis'
-import ScrambleText from 'src/shared/components/ScrambleText'
 
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
@@ -29,6 +28,7 @@ import {
   LandingPageSubtitle,
   LandingPageTitle,
 } from './styledComponents'
+import { ScrambleText } from 'adminis-gardenui'
 
 const loadingStyles = {
   width: '100%',

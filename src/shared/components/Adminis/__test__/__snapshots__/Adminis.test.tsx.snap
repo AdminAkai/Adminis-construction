@@ -8,5 +8,7 @@ exports[`Adminis tests Adminis snapshot renders correctly 1`] = `
       "userSelect": "none",
     }
   }
-/>
+>
+  <span />
+</span>
 `;

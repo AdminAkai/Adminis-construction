@@ -3,7 +3,7 @@
 exports[`PanelDescription tests PanelDescription snapshot renders correctly 1`] = `
 <p
   aria-label="Project Description"
-  className="sc-beyTiQ dAaZTK"
+  className="sc-braxZu jhDjdk"
 >
   test description
 </p>
