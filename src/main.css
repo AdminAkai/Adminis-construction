@@ -2,6 +2,7 @@
 *,
 *::before,
 *::after {
+  scrollbar-color: transparent;
   font-family: 'Blender Pro';
   box-sizing: border-box;
 }

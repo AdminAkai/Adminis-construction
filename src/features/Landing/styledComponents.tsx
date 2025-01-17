@@ -2,25 +2,17 @@ import styled from 'styled-components'
 
 export const LandingPageContainer = styled.div`
   width: 100%;
-  height: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
     padding: 1.5rem;
-    flex-direction: column;
-    justify-content: flex-start;
   }
 `
 
 export const LandingPageLogo = styled.div`
-  width: 100%;
+  height: calc(100vh - 200px);
   display: flex;
-  flex-direction: column;
   text-align: left;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -34,12 +26,12 @@ export const LandingPageLogo = styled.div`
 
 export const LandingPageTitle = styled.h1`
   font-size: 8rem;
-  color: ${({ theme }) => theme.Adminis};
   text-align: left;
+  color: ${({ theme }) => theme.Adminis};
+  text-align: center;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
     font-size: 4rem;
-    text-align: center;
   }
 `
 

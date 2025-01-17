@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: #808080 #ffffff;
+    scrollbar-color: ${({ theme }) => theme.Adminis};
+    transition: scrollbar-color 3s ease;
   }
 
   /* Chrome, Edge, and Safari */
@@ -14,11 +15,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.primary};
+    background-color: ${({ theme }) => theme.primary};
+    transition: background-color 3s ease;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #808080;
+    background-color: ${({ theme }) => theme.Adminis};
+    transition: background-color 3s ease;
     border-radius: 10px;
     border: 4px solid ${({ theme }) => theme.primary};
   }

@@ -63,19 +63,21 @@ const Landing: FC = () => {
           </LandingPageConstruction>
         </LandingPageSubtext>
       </LandingPageLogo>
-      {loading ? (
-        <LoadingSpinner
-          color={colors.orange}
-          wrapperStyle={loadingStyles}
-          ariaLabel='landing page loading spinner'
-        />
-      ) : (
-        <Grid panels={githubRepos.length}>
-          {githubRepos.map((repo, index) => (
-            <ProjectCard key={`${name}-${index}`} {...repo} />
-          ))}
-        </Grid>
-      )}
+      <LandingPageLogo>
+        {loading ? (
+          <LoadingSpinner
+            color={colors.orange}
+            wrapperStyle={loadingStyles}
+            ariaLabel='landing page loading spinner'
+          />
+        ) : (
+          <Grid panels={githubRepos.length}>
+            {githubRepos.map((repo, index) => (
+              <ProjectCard key={`${name}-${index}`} {...repo} />
+            ))}
+          </Grid>
+        )}
+      </LandingPageLogo>
     </LandingPageContainer>
   )
 }
