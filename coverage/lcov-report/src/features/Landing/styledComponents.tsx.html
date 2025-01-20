@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>0/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -135,7 +135,20 @@
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,12 +166,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -166,10 +173,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,29 +221,23 @@
 &nbsp;
 export const <span class="cstat-no" title="statement not covered" >LandingPageContainer = styled.div`</span>
   width: 100%;
-  height: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 &nbsp;
   @media screen and (max-width: ${<span class="fstat-no" title="function not covered" >({</span> theme }) =&gt; <span class="cstat-no" title="statement not covered" >theme.mobileMediaQuery}</span>) {
     padding: 1.5rem;
-    flex-direction: column;
-    justify-content: flex-start;
   }
 `
 &nbsp;
 export const <span class="cstat-no" title="statement not covered" >LandingPageLogo = styled.div`</span>
-  width: 100%;
+  height: calc(100vh - 200px);
   display: flex;
-  flex-direction: column;
   text-align: left;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
 &nbsp;
   @media screen and (max-width: ${<span class="fstat-no" title="function not covered" >({</span> theme }) =&gt; <span class="cstat-no" title="statement not covered" >theme.mobileMediaQuery}</span>) {
+    height: auto;
     padding: 1.5rem;
     flex-direction: column;
     justify-content: flex-start;
@@ -241,14 +245,25 @@ export const <span class="cstat-no" title="statement not covered" >LandingPageLo
   }
 `
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >LandingPageTitle = styled.h1`</span>
-  font-size: 8rem;
-  color: ${<span class="fstat-no" title="function not covered" >({</span> theme }) =&gt; <span class="cstat-no" title="statement not covered" >theme.Adminis}</span>;
-  text-align: left;
+export const <span class="cstat-no" title="statement not covered" >LandingPageProjects = styled(LandingPageLogo)`</span>
+  height: 100vh;
+  padding-left: 8rem;
+  padding-right: 8rem;
 &nbsp;
   @media screen and (max-width: ${<span class="fstat-no" title="function not covered" >({</span> theme }) =&gt; <span class="cstat-no" title="statement not covered" >theme.mobileMediaQuery}</span>) {
+    height: auto;
+  }
+`
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >LandingPageTitle = styled.h1`</span>
+  font-size: 8rem;
+  text-align: left;
+  color: ${<span class="fstat-no" title="function not covered" >({</span> theme }) =&gt; <span class="cstat-no" title="statement not covered" >theme.Adminis}</span>;
+  text-align: center;
+&nbsp;
+  @media screen and (max-width: ${<span class="fstat-no" title="function not covered" >({</span> theme }) =&gt; <span class="cstat-no" title="statement not covered" >theme.mobileMediaQuery}</span>) {
+    height: auto;
     font-size: 4rem;
-    text-align: center;
   }
 `
 &nbsp;
@@ -286,7 +301,7 @@ export const <span class="cstat-no" title="statement not covered" >LandingPageCo
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-13T01:32:37.559Z
+                at 2025-01-20T22:30:51.646Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
