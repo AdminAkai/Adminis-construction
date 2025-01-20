@@ -32,6 +32,7 @@ export const LandingPageProjects = styled(LandingPageLogo)`
   padding-right: 8rem;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    padding: 0;
     height: auto;
   }
 `

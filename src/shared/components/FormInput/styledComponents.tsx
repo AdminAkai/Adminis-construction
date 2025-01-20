@@ -7,7 +7,7 @@ export const CustomFormInputSpace = styled.div`
   align-items: flex-start;
   position: relative;
   padding: 15px 0 0;
-  width: 75%;
+  width: 100%;
 `
 
 export const CustomFormInputLabel = styled.label`
