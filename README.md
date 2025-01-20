@@ -6,7 +6,17 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 ## Changelog
 
-**11/30/2023 v0.03**:
+**01/20/2025 v0.05**:
+
+- Re-arranged general structure of the UI
+
+- Added Contact sector to Landing Page
+
+- Only one route for now
+
+- Adjusted mobile stylings, added custom styled form and form inputs
+
+**11/30/2023 v0.04**:
 
 - Added animations and Framer Motion animations
 

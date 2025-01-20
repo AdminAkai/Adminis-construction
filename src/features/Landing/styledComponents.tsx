@@ -15,12 +15,24 @@ export const LandingPageLogo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    height: auto;
     padding: 1.5rem;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 1.5rem;
+  }
+`
+
+export const LandingPageProjects = styled(LandingPageLogo)`
+  height: 100vh;
+  padding-left: 8rem;
+  padding-right: 8rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    height: auto;
   }
 `
 
@@ -31,6 +43,7 @@ export const LandingPageTitle = styled.h1`
   text-align: center;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    height: auto;
     font-size: 4rem;
   }
 `

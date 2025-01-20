@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const MainGrid = styled(motion.div)<{ $gridPanels: number }>`
-  padding: 8rem;
   height: 100%;
   width: 100%;
   display: grid;

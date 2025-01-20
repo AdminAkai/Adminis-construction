@@ -32,19 +32,18 @@ export const GridItems: GridItemsType = [
 export const aboutSummaries = [
   {
     header: {
-      en: 'Meet the Founder, CEO, and CTO',
-      jp: '創業者、CEO、CTOの紹介',
+      en: 'Mission',
+      jp: '任務',
     },
     summary: {
-      en: `I made Adminis to demonstrate where innovation and passion meet
-      technology. I'm Josh Trinidad, the driving force behind this
-      one-man-army company. My journey in the world of programming started
+      en: `With Adminis my goal is to demonstrate where innovation and passion meet
+      technology. My journey in the world of programming started
       in highschool, and I've been doing it professionally for a little
       over 9 years now. Over time, I've honed my skills, staying
       forefront of industry trends and best practices. I love to learn, and
       programming never stops teaching.`,
       jp: `私は、革新と情熱がテクノロジーと出会う場所を示すためにアドミニスを作った。
-      技術です。私はジョシュ・トリニダッド。一騎当千の会社です。プログラミングの世界での私の旅は プログラミングの世界での私の旅は、
+      技術です。プログラミングの世界での私の旅は プログラミングの世界での私の旅は、
       高校時代に始まり、プロフェッショナルとして もう9年以上になる。長い間、私は自分のスキルを磨き、
       業界のトレンドやベストプラクティスの最前線に立ち続けてきました。業界のトレンドやベストプラクティスの最前線に立ち続けながら。
       私は学ぶことが大好きです。プログラミングは学ぶことを止めません。`,
@@ -52,11 +51,11 @@ export const aboutSummaries = [
   },
   {
     header: {
-      en: `Let' Work Together`,
+      en: `Let's Work Together`,
       jp: '力を合わせよう',
     },
     summary: {
-      en: `Reach out and contact me, either as Adminis or Josh, and let's
+      en: `Reach out and contact me, and let's
       work together. Whether it's the next big thing you want to build
       from the ground up, or just a job position that needs filling,
       I'm available for all. Click on any of the panels to get to know
@@ -106,8 +105,8 @@ export const variants: Variants = {
 }
 
 export const resumeDesc: languageText = {
-  en: 'My Resume, for those that like to personally download my data',
-  jp: '個人的に私のデータをダウンロードしたい人のための私の履歴書',
+  en: 'My resume',
+  jp: '個人的に私のデー',
 }
 
 export const PageHeader: languageText = {

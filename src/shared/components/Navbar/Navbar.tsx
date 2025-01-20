@@ -20,13 +20,13 @@ const Navbar: FC = () => {
       <NavbarOptions>
         <NavLangSetting />
         <IconRenderer />
-        {allNavbarOptions.map((option, i) => (
+        {/* {allNavbarOptions.map((option, i) => (
           <NavbarOption
             {...option}
             key={`${i}-${option.label}`}
             ariaLabel={option.label}
           />
-        ))}
+        ))} */}
       </NavbarOptions>
     </NavbarContainer>
   )

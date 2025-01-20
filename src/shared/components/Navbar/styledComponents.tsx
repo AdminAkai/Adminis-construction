@@ -9,10 +9,10 @@ export const NavbarContainer = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100px;
-  background: transparent;
+  background-color: ${({ theme }) => theme.primary};
   padding: 2rem 3rem;
   overflow: hidden;
+  transition: background-color 3s ease;
 `
 export const NavbarOptions = styled.div`
   display: flex;

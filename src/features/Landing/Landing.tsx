@@ -24,11 +24,14 @@ import {
   LandingPageConstruction,
   LandingPageContainer,
   LandingPageLogo,
+  LandingPageProjects,
   LandingPageSubtext,
   LandingPageSubtitle,
   LandingPageTitle,
 } from './styledComponents'
 import { ScrambleText } from 'adminis-gardenui'
+import About from '../About'
+import Contact from '../Contact'
 
 const loadingStyles = {
   width: '100%',
@@ -63,7 +66,7 @@ const Landing: FC = () => {
           </LandingPageConstruction>
         </LandingPageSubtext>
       </LandingPageLogo>
-      <LandingPageLogo>
+      <LandingPageProjects>
         {loading ? (
           <LoadingSpinner
             color={colors.orange}
@@ -77,7 +80,9 @@ const Landing: FC = () => {
             ))}
           </Grid>
         )}
-      </LandingPageLogo>
+      </LandingPageProjects>
+      <About />
+      <Contact />
     </LandingPageContainer>
   )
 }

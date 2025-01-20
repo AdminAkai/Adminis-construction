@@ -7,7 +7,7 @@ export const GridPanelBox = styled(motion.div)`
   width: 100%;
   height: 100%;
   color: ${({ theme }) => theme.Adminis};
-  font-size: 1.5rem;
+  font-size: 3rem;
   padding: 1.5rem;
   grid-area: input;
   grid-column: auto;

@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 
 export const AboutContainer = styled(motion.div)`
   width: 100%;
-  height: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  height: 100vh;
+  padding-left: 8rem;
+  padding-right: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,12 +17,14 @@ export const AboutContainer = styled(motion.div)`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding: 0 0 1.5rem 0;
   }
 `
 
 export const AboutInfo = styled.section`
   width: 100vw;
+  padding-right: 3rem;
+
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
     padding: 1.5rem;
   }
@@ -31,7 +33,11 @@ export const AboutInfo = styled.section`
 export const AboutHeader = styled.h1`
   color: ${({ theme }) => theme.Adminis};
   margin-bottom: 1.5rem;
-  font-size: 3.5rem;
+  font-size: 7rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    font-size: 4rem;
+  }
 `
 
 export const AboutSummary = styled.section`
@@ -40,13 +46,19 @@ export const AboutSummary = styled.section`
 
 export const AboutSummaryHeader = styled.h3`
   color: ${({ theme }) => theme.Adminis};
+  font-size: 2rem;
   text-align: left;
 `
 
 export const AboutSummaryText = styled.p`
   color: ${({ theme }) => theme.secondary};
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
   text-align: left;
+
+  @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
+    font-size: 1rem;
+  }
 `
 
 export const AboutResume = styled.a`

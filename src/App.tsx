@@ -13,7 +13,6 @@ import store, { persistor } from 'src/shared/redux/store'
 
 import Main from 'src/features/Main'
 import Landing from 'src/features/Landing'
-import About from 'src/features/About'
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -42,7 +41,6 @@ function App() {
             <Routes>
               <Route path='/' element={<Main />}>
                 <Route index element={<Landing />} />
-                <Route path='/about' element={<About />} />
               </Route>
             </Routes>
           </BrowserRouter>
