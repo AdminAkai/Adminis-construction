@@ -3,16 +3,7 @@ import { combineReducers } from 'redux'
 import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
 import createSagaMiddleware from '@redux-saga/core'
 import { all } from 'redux-saga/effects'
-import {
-  persistStore,
-  persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-} from 'redux-persist'
+import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 import landingSagas from 'src/features/Landing/redux/landingSagas'
@@ -36,16 +27,7 @@ const persistedReducer = persistReducer(persistConfig, reducers)
 
 const store = configureStore({
   reducer: persistedReducer,
-  // @ts-ignore
-  middleware: (getDefaultMiddleware) =>
-    new Tuple(
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      }),
-      sagas
-    ),
+  middleware: () => new Tuple(sagas),
 })
 
 export type RootState = ReturnType<typeof store.getState>
