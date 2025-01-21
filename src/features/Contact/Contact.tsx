@@ -1,4 +1,4 @@
-import { FC, FormEventHandler, useActionState } from 'react'
+import { FC, useActionState } from 'react'
 import { motion } from 'framer-motion'
 
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
@@ -24,13 +24,8 @@ export const JoshTrinidadPDF = new URL(
 
 const Contact: FC = () => {
   const lang: Language = useAppSelector(selectLanguage)
-  const [_, submitAction, isPending] = useActionState<{
-    name: string
-    email: string
-    inquiry: string
-  }>(
-    async (previousState: unknown, formData: any) => {
-      console.log(previousState)
+  const [_, submitAction, isPending] = useActionState(
+    async (_: unknown, formData: any) => {
       try {
         const response = await fetch(import.meta.env.VITE_GOOGLE_SHEETS_URL, {
           method: 'POST',
@@ -44,7 +39,7 @@ const Contact: FC = () => {
         redirect('/path')
       }
     },
-    { name: '', email: '', inquiry: '' }
+    null
   )
 
   return (
