@@ -4,17 +4,19 @@ import { languageText } from 'src/shared/types'
 export const FormInputs = [
   {
     label: 'Name',
-    id: 'name',
+    name: 'name',
     type: 'text',
+    required: true,
   },
   {
     label: 'Email',
-    id: 'email',
+    name: 'email',
     type: 'text',
+    required: true,
   },
   {
     label: 'Inquiry',
-    id: 'inquiry',
+    name: 'inquiry',
     type: 'text',
   },
 ]

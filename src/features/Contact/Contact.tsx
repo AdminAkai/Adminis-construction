@@ -1,4 +1,4 @@
-import { FC, FormEventHandler } from 'react'
+import { FC, FormEventHandler, useActionState } from 'react'
 import { motion } from 'framer-motion'
 
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
@@ -15,6 +15,7 @@ import {
 import FormSpace from 'src/shared/components/FormSpace/FormSpace'
 import FormInput from 'src/shared/components/FormInput'
 import CustomButton from 'src/shared/components/CustomButton'
+import { redirect } from 'react-router-dom'
 
 export const JoshTrinidadPDF = new URL(
   'src/assets/JoshTrinidadResume.pdf',
@@ -23,9 +24,28 @@ export const JoshTrinidadPDF = new URL(
 
 const Contact: FC = () => {
   const lang: Language = useAppSelector(selectLanguage)
-  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault()
-  }
+  const [_, submitAction, isPending] = useActionState<{
+    name: string
+    email: string
+    inquiry: string
+  }>(
+    async (previousState: unknown, formData: any) => {
+      console.log(previousState)
+      try {
+        const response = await fetch(import.meta.env.VITE_GOOGLE_SHEETS_URL, {
+          method: 'POST',
+          body: formData,
+        })
+        return response
+      } catch (err) {
+        console.log(err)
+        return null
+      } finally {
+        redirect('/path')
+      }
+    },
+    { name: '', email: '', inquiry: '' }
+  )
 
   return (
     <ContactContainer
@@ -45,11 +65,20 @@ const Contact: FC = () => {
           </ContactSummaryHeader>
         </motion.div>
       </ContactInfo>
-      <FormSpace onSubmit={onSubmit}>
-        {FormInputs.map(({ label, id, type }) => (
-          <FormInput key={`${label}-${id}`} label={label} id={id} type={type} />
+      <FormSpace action={submitAction}>
+        {FormInputs.map(({ label, name, type, required }) => (
+          <FormInput
+            key={`${label}-${name}`}
+            label={label}
+            name={name}
+            type={type}
+            required={required}
+            disabled={isPending}
+          />
         ))}
-        <CustomButton type='submit'>Submit</CustomButton>
+        <CustomButton type='submit' loading={isPending}>
+          Submit
+        </CustomButton>
       </FormSpace>
     </ContactContainer>
   )

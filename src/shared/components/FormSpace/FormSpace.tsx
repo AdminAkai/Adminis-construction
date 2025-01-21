@@ -1,19 +1,15 @@
-import { FC, FormEventHandler, PropsWithChildren } from 'react'
+import { FC, PropsWithChildren } from 'react'
 import { CustomFormSpace } from './styledComponents'
 
 type FormSpaceProps = {
-  onSubmit: FormEventHandler<HTMLFormElement>
+  action: string | ((formData: FormData) => void | Promise<void>) | undefined
 }
 
 const FormSpace: FC<PropsWithChildren<FormSpaceProps>> = ({
   children,
-  onSubmit,
+  action,
 }) => (
-  <CustomFormSpace
-    autoComplete='off'
-    aria-autocomplete='none'
-    onSubmit={onSubmit}
-  >
+  <CustomFormSpace action={action} autoComplete='off' aria-autocomplete='none'>
     {children}
   </CustomFormSpace>
 )

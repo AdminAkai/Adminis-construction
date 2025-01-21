@@ -7,21 +7,33 @@ import {
 
 type FormInputProps = {
   label: string
-  id: string
+  name: string
   required?: boolean
   type: HTMLInputTypeAttribute
+  disabled?: boolean
 }
 
-const FormInput: FC<FormInputProps> = ({ label, id, type, required }) => (
+const FormInput: FC<FormInputProps> = ({
+  label,
+  name,
+  type,
+  required,
+  disabled,
+}) => (
   <CustomFormInputSpace>
     <CustomFormInput
       type={type}
       placeholder={label}
-      id={id}
+      id={name}
       required={required}
+      name={name}
       aria-label={`${label} Form Input`}
+      disabled={disabled}
     />
-    <CustomFormInputLabel htmlFor={id} aria-label={`${label} Form Input Label`}>
+    <CustomFormInputLabel
+      htmlFor={name}
+      aria-label={`${label} Form Input Label`}
+    >
       {label}
     </CustomFormInputLabel>
   </CustomFormInputSpace>
