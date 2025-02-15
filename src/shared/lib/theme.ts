@@ -34,7 +34,7 @@ export const colors: IColors = {
   white: '#ffffff',
 }
 
-const lightTheme: IThemeColors = {
+const light: IThemeColors = {
   primary: colors.white,
   nav: colors.gray,
   navOption: colors.white,
@@ -43,7 +43,7 @@ const lightTheme: IThemeColors = {
   ...styleDefaults,
 }
 
-const darkTheme: IThemeColors = {
+const dark: IThemeColors = {
   primary: colors.gray,
   nav: colors.orange,
   navOption: colors.gray,
@@ -53,8 +53,8 @@ const darkTheme: IThemeColors = {
 }
 
 const theme: ITheme = {
-  lightTheme,
-  darkTheme,
+  dark,
+  light,
 }
 
 export default theme

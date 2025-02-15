@@ -1,0 +1,81 @@
+.landing-container {
+  width: 100%;
+
+}
+
+.landing-logo {
+  height: calc(100vh - 200px);
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.landing-projects {
+  height: 100vh;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.landing-title {
+  font-size: 8rem;
+  text-align: left;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.landing-subtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.landing-subtitle {
+  font-size: 3rem;
+  color: var(--background-primary);
+  text-align: left;
+}
+
+.landing-construction {
+  font-size: 2rem;
+  color: var(--background-primary);
+  text-align: left;
+}
+
+@media screen and (max-width: var(--mobile-media-query)) {
+  .landing-container {
+    padding: 1.5rem;
+  }
+
+  .landing-logo {
+    height: auto;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .landing-projects {
+    padding: 0;
+    height: auto;
+  }
+
+  .landing-title {
+    height: auto;
+    font-size: 4rem;
+  }
+
+  .landing-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .landing-construction {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

@@ -16,19 +16,11 @@ import {
 import ProjectCard from './ProjectCard'
 
 import { subtitle, underConstruction } from './lib'
-import {
-  LandingPageConstruction,
-  LandingPageContainer,
-  LandingPageLogo,
-  LandingPageProjects,
-  LandingPageSubtext,
-  LandingPageSubtitle,
-  LandingPageTitle,
-} from './styledComponents'
 import About from '../About'
 import Contact from '../Contact'
 import ScrambleText from 'src/shared/components/ScrambleText'
 import { PuffLoader } from 'react-spinners'
+import styles from './landing.module.css'
 
 const loadingStyles = {
   width: '100%',
@@ -49,21 +41,21 @@ const Landing: FC = () => {
   }, [dispatch])
 
   return (
-    <LandingPageContainer>
-      <LandingPageLogo>
-        <LandingPageTitle>
+    <div className={styles['landing-container']}>
+      <div className={styles['landing-logo']}>
+        <div className={styles['landing-title']}>
           <Adminis />
-        </LandingPageTitle>
-        <LandingPageSubtext>
-          <LandingPageSubtitle>
+        </div>
+        <div className={styles['landing-subtext']}>
+          <div className={styles['landing-subtitle']}>
             <ScrambleText text={subtitle[lang]} />
-          </LandingPageSubtitle>
-          <LandingPageConstruction>
+          </div>
+          <div className={styles['landing-construction']}>
             <ScrambleText text={underConstruction[lang]} />
-          </LandingPageConstruction>
-        </LandingPageSubtext>
-      </LandingPageLogo>
-      <LandingPageProjects>
+          </div>
+        </div>
+      </div>
+      <div className={styles['landing-projects']}>
         {loading ? (
           <PuffLoader cssOverride={loadingStyles} />
         ) : (
@@ -73,10 +65,10 @@ const Landing: FC = () => {
             ))}
           </Grid>
         )}
-      </LandingPageProjects>
+      </div>
       <About />
       <Contact />
-    </LandingPageContainer>
+    </div>
   )
 }
 

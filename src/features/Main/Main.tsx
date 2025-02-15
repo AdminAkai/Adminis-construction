@@ -24,7 +24,7 @@ const Main: FC = () => {
 
   return (
     <ThemeProvider theme={theme[mode]}>
-      <div data-colormode={mode} className={styles.container}>
+      <div data-colormode={mode} className={styles['main-container']}>
         <Navbar />
         <Outlet />
       </div>

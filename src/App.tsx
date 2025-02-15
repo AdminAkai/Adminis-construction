@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {
   ApolloClient,
   ApolloProvider,
@@ -11,8 +10,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import store, { persistor } from 'src/shared/redux/store'
 
-import Main from 'src/features/Main'
-import Landing from 'src/features/Landing'
+import AppRouter from './AppRouter'
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -37,13 +35,7 @@ function App() {
     <ApolloProvider client={client}>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<Main />}>
-                <Route index element={<Landing />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
+          <AppRouter />
         </PersistGate>
       </Provider>
     </ApolloProvider>

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import GridPanel from 'src/shared/components/GridPanel'
 import PanelDescription from 'src/shared/components/PanelDescription'
 
-import { ProjectCardContainer } from './styledComponents'
+import styles from './projectCard.module.css'
 
 type ProjectCardProps = {
   name: string
@@ -14,10 +14,14 @@ type ProjectCardProps = {
 const ProjectCard: FC<ProjectCardProps> = ({ name, description, url }) => {
   return (
     <GridPanel>
-      <ProjectCardContainer href={url} target='_blank'>
+      <a
+        className={styles['project-card-container']}
+        href={url}
+        target='_blank'
+      >
         {name}
         <PanelDescription>{description}</PanelDescription>
-      </ProjectCardContainer>
+      </a>
     </GridPanel>
   )
 }
