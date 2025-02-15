@@ -7,8 +7,6 @@ import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 
-import { colors } from 'src/shared/lib/theme'
-
 import { fetchGithubReposStart } from './redux/landingActions'
 import {
   selectGithubRepos,
@@ -30,6 +28,7 @@ import {
 import About from '../About'
 import Contact from '../Contact'
 import ScrambleText from 'src/shared/components/ScrambleText'
+import { PuffLoader } from 'react-spinners'
 
 const loadingStyles = {
   width: '100%',
@@ -66,13 +65,8 @@ const Landing: FC = () => {
       </LandingPageLogo>
       <LandingPageProjects>
         {loading ? (
-          <div>test</div>
+          <PuffLoader cssOverride={loadingStyles} />
         ) : (
-          // <LoadingSpinner
-          //   color={colors.orange}
-          //   wrapperStyle={loadingStyles}
-          //   ariaLabel='landing page loading spinner'
-          // />
           <Grid panels={githubRepos.length}>
             {githubRepos.map((repo, index) => (
               <ProjectCard key={`${name}-${index}`} {...repo} />
