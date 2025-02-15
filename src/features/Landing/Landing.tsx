@@ -1,7 +1,5 @@
 import { FC, useEffect } from 'react'
 
-import { Grid as LoadingSpinner } from 'react-loader-spinner'
-
 import Grid from 'src/shared/components/Grid'
 import Adminis from 'src/shared/components/Adminis'
 
@@ -29,9 +27,9 @@ import {
   LandingPageSubtitle,
   LandingPageTitle,
 } from './styledComponents'
-import { ScrambleText } from 'adminis-gardenui'
 import About from '../About'
 import Contact from '../Contact'
+import ScrambleText from 'src/shared/components/ScrambleText'
 
 const loadingStyles = {
   width: '100%',
@@ -68,12 +66,13 @@ const Landing: FC = () => {
       </LandingPageLogo>
       <LandingPageProjects>
         {loading ? (
-          <LoadingSpinner
-            color={colors.orange}
-            wrapperStyle={loadingStyles}
-            ariaLabel='landing page loading spinner'
-          />
+          <div>test</div>
         ) : (
+          // <LoadingSpinner
+          //   color={colors.orange}
+          //   wrapperStyle={loadingStyles}
+          //   ariaLabel='landing page loading spinner'
+          // />
           <Grid panels={githubRepos.length}>
             {githubRepos.map((repo, index) => (
               <ProjectCard key={`${name}-${index}`} {...repo} />

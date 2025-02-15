@@ -1,6 +1,5 @@
 import { FC } from 'react'
-
-import { ScrambleText } from 'adminis-gardenui'
+import ScrambleText from '../ScrambleText'
 
 const AdminisTitle = 'λdminis'
 

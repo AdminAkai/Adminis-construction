@@ -8,7 +8,6 @@ import Navbar from 'src/shared/components/Navbar'
 import { selectMode } from 'src/shared/redux/settingsSlice/settingsSelectors'
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 
-import GlobalStyle from 'src/shared/lib/globalStyles'
 import theme from 'src/shared/lib/theme'
 
 import { setLanguage } from 'src/shared/redux/settingsSlice/settingsSlice'
@@ -25,7 +24,6 @@ const Main: FC = () => {
 
   return (
     <ThemeProvider theme={theme[mode]}>
-      <GlobalStyle />
       <div data-colormode={mode} className={styles.container}>
         <Navbar />
         <Outlet />
