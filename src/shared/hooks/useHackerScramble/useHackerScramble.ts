@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-
-import { getRandomLetter } from '../../utils/stringUtils'
+import { getRandomLetter } from 'src/shared/utils/stringUtils'
 
 const useHackerScramble = (initialWord: string): string => {
   const [word, setWord] = useState<string>('')
