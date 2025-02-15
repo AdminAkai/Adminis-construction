@@ -15,7 +15,7 @@
 
 [data-colormode='dark'] {
   --background-primary: var(--gray);
-  --nav-primary(--orange);
+  --nav-primary: var(--orange);
   --text-primary: var(--orange);
 }
 
