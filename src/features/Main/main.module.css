@@ -1,0 +1,9 @@
+.container {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--background-primary);
+  transition: background-color 3s ease;
+  width: 100%;
+}

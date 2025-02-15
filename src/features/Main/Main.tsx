@@ -11,8 +11,8 @@ import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 import GlobalStyle from 'src/shared/lib/globalStyles'
 import theme from 'src/shared/lib/theme'
 
-import { MainContainer } from './styledComponents'
 import { setLanguage } from 'src/shared/redux/settingsSlice/settingsSlice'
+import styles from './main.module.css'
 
 const Main: FC = () => {
   const dispatch = useAppDispatch()
@@ -26,10 +26,10 @@ const Main: FC = () => {
   return (
     <ThemeProvider theme={theme[mode]}>
       <GlobalStyle />
-      <MainContainer>
+      <div data-colormode={mode} className={styles.container}>
         <Navbar />
         <Outlet />
-      </MainContainer>
+      </div>
     </ThemeProvider>
   )
 }

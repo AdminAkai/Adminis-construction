@@ -1,6 +1,6 @@
 export enum Mode {
-  DARK = 'darkTheme',
-  LIGHT = 'lightTheme',
+  DARK = 'dark',
+  LIGHT = 'light',
 }
 
 export enum Language {

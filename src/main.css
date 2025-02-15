@@ -1,3 +1,23 @@
+:root {
+  --orange: #FB7E14;
+  --black: #000000;
+  --dark-gray: #151515;
+  --gray: #292929;
+  --white: #FFFFFF
+}
+
+[data-colormode='light'] {
+  --background-primary: var(--white);
+  --nav-primary: var(--gray);
+  --text-primary: var(--orange);
+
+}
+
+[data-colormode='dark'] {
+  --background-primary: var(--gray);
+  --nav-primary(--orange);
+  --text-primary: var(--orange);
+}
 
 *,
 *::before,
