@@ -15,19 +15,12 @@ import {
 
 import ProjectCard from './ProjectCard'
 
-import { subtitle, underConstruction } from './lib'
+import { loadingStyles, subtitle, underConstruction } from './lib'
 import About from '../About'
 import Contact from '../Contact'
 import ScrambleText from 'src/shared/components/ScrambleText'
 import { PuffLoader } from 'react-spinners'
 import styles from './landing.module.css'
-
-const loadingStyles = {
-  width: '100%',
-  height: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
-}
 
 const Landing: FC = () => {
   const dispatch = useAppDispatch()

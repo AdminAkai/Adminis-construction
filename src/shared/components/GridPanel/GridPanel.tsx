@@ -1,10 +1,9 @@
 import { FC, memo, PropsWithChildren } from 'react'
 
-import { variants } from './lib'
-import { GridPanelBox } from './styledComponents'
+import styles from './gridPanel.module.css'
 
 const GridPanel: FC<PropsWithChildren> = ({ children }) => (
-  <GridPanelBox variants={variants}>{children}</GridPanelBox>
+  <div className={styles['grid-panel-box']}>{children}</div>
 )
 
 const memoizedGridPanel = memo(GridPanel)
