@@ -1,16 +1,18 @@
 .landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-
 }
 
 .landing-logo {
-  height: calc(100vh - 200px);
+  height: 100vh;
   display: flex;
   text-align: left;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 200px;
 }
 
 .landing-projects {

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const NavbarContainer = styled(motion.nav)`
-  position: sticky;
+  position: absolute;
   height: 100px;
   top: 0;
   display: flex;
