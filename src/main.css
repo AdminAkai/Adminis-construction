@@ -1,4 +1,5 @@
 :root {
+    font-family: 'Blender Pro';
   --orange: #FB7E14;
   --black: #000000;
   --dark-gray: #151515;
@@ -23,13 +24,15 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+}
+
+* {
   scrollbar-color: transparent;
-  font-family: 'Blender Pro';
   box-sizing: border-box;
   scrollbar-width: auto;
   scrollbar-color: var(--text-primary);
   transition: scrollbar-color 3s ease;
-  margin: 0;
 }
 
 *::-webkit-scrollbar {
@@ -42,7 +45,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: --var(--text-primary);
+  background-color: var(--text-primary);
   transition: background-color 3s ease;
   border-radius: 10px;
   border: 4px solid var(--background-primary);

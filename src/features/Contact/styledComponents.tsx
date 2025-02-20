@@ -9,6 +9,7 @@ export const ContactContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  scroll-snap-align: center;
 
   @media screen and (max-width: ${({ theme }) => theme.mobileMediaQuery}) {
     height: auto;
