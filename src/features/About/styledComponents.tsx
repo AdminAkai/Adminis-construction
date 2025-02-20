@@ -5,8 +5,7 @@ export const AboutContainer = styled(motion.div)`
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
