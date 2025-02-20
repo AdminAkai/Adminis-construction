@@ -12,13 +12,14 @@
   --background-primary: var(--white);
   --nav-primary: var(--gray);
   --text-primary: var(--orange);
-
+  --text-secondary: var(--gray);
 }
 
 [data-colormode='dark'] {
   --background-primary: var(--gray);
   --nav-primary: var(--orange);
   --text-primary: var(--orange);
+  --text-secondary: var(--white);
 }
 
 *,

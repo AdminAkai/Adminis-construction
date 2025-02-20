@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { motion } from 'framer-motion'
 
 import Grid from 'src/shared/components/Grid'
 import GridPanel from 'src/shared/components/GridPanel'
@@ -9,22 +8,9 @@ import PanelDescription from 'src/shared/components/PanelDescription'
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 import { useAppSelector } from 'src/shared/redux/store'
+import styles from './about.module.css'
 
-import {
-  GridItems,
-  PageHeader,
-  aboutSummaries,
-  resumeDesc,
-  variants,
-} from './lib'
-import {
-  AboutContainer,
-  AboutHeader,
-  AboutInfo,
-  AboutResume,
-  AboutSummaryHeader,
-  AboutSummaryText,
-} from './styledComponents'
+import { GridItems, PageHeader, aboutSummaries, resumeDesc } from './lib'
 
 export const JoshTrinidadPDF = new URL(
   'src/assets/JoshTrinidadResume.pdf',
@@ -35,23 +21,18 @@ const About: FC = () => {
   const lang: Language = useAppSelector(selectLanguage)
 
   return (
-    <AboutContainer
-      initial='initial'
-      animate='animate'
-      transition={{ staggerChildren: 0.3 }}
-    >
-      <AboutInfo>
-        <AboutHeader>
-          <motion.span variants={variants}>{PageHeader[lang]}</motion.span>{' '}
-          <Adminis />
-        </AboutHeader>
+    <div className={styles['about-container']}>
+      <div className={styles['about-info']}>
+        <div className={styles['about-header']}>
+          <span>{PageHeader[lang]}</span> <Adminis />
+        </div>
         {aboutSummaries.map(({ header, summary }) => (
-          <motion.div key={header.en} variants={variants}>
-            <AboutSummaryHeader>{header[lang]}</AboutSummaryHeader>
-            <AboutSummaryText>{summary[lang]}</AboutSummaryText>
-          </motion.div>
+          <div>
+            <h3 className={styles['about-summary-header']}>{header[lang]}</h3>
+            <p className={styles['about-summary-text']}>{summary[lang]}</p>
+          </div>
         ))}
-      </AboutInfo>
+      </div>
       <Grid panels={GridItems.length}>
         {GridItems.map(({ name, description, props, Link }, index) => (
           <GridPanel key={`${name}-${index}`}>
@@ -60,13 +41,17 @@ const About: FC = () => {
           </GridPanel>
         ))}
         <GridPanel>
-          <AboutResume href={JoshTrinidadPDF} download='JoshTrinidadResume.pdf'>
+          <a
+            className={styles['about-resume']}
+            href={JoshTrinidadPDF}
+            download='JoshTrinidadResume.pdf'
+          >
             Resume
-          </AboutResume>
+          </a>
           <PanelDescription>{resumeDesc[lang]}</PanelDescription>
         </GridPanel>
       </Grid>
-    </AboutContainer>
+    </div>
   )
 }
 
