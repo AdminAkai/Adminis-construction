@@ -1,17 +1,11 @@
 import { FC, useActionState } from 'react'
-import { motion } from 'framer-motion'
 
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 import { useAppSelector } from 'src/shared/redux/store'
+import styles from './contact.module.css'
 
-import { contactInfo, FormInputs, variants } from './lib'
-import {
-  ContactContainer,
-  ContactHeader,
-  ContactInfo,
-  ContactSummaryHeader,
-} from './styledComponents'
+import { contactInfo, FormInputs } from './lib'
 import FormSpace from 'src/shared/components/FormSpace/FormSpace'
 import FormInput from 'src/shared/components/FormInput'
 import CustomButton from 'src/shared/components/CustomButton'
@@ -43,23 +37,17 @@ const Contact: FC = () => {
   )
 
   return (
-    <ContactContainer
-      initial='initial'
-      animate='animate'
-      transition={{ staggerChildren: 0.3 }}
-    >
-      <ContactInfo>
-        <ContactHeader>
-          <motion.span variants={variants}>
-            {contactInfo.header[lang]}
-          </motion.span>
-        </ContactHeader>
-        <motion.div variants={variants}>
-          <ContactSummaryHeader>
+    <div className={styles['contact-container']}>
+      <section className={styles['contact-info']}>
+        <h1 className={styles['contact-header']}>
+          <span>{contactInfo.header[lang]}</span>
+        </h1>
+        <div className={styles['contact-summary']}>
+          <h3 className={styles['contact-summary-header']}>
             {contactInfo.summary[lang]}
-          </ContactSummaryHeader>
-        </motion.div>
-      </ContactInfo>
+          </h3>
+        </div>
+      </section>
       <FormSpace action={submitAction}>
         {FormInputs.map(({ label, name, type, required }) => (
           <FormInput
@@ -75,7 +63,7 @@ const Contact: FC = () => {
           Submit
         </CustomButton>
       </FormSpace>
-    </ContactContainer>
+    </div>
   )
 }
 

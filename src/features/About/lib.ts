@@ -89,21 +89,6 @@ export const aboutSummaries = [
   },
 ]
 
-export const variants: Variants = {
-  initial: {
-    opacity: 0,
-    y: 50,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: 'easeInOut',
-    },
-  },
-}
-
 export const resumeDesc: languageText = {
   en: 'My resume',
   jp: '個人的に私のデー',

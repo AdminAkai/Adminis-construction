@@ -32,21 +32,6 @@ export const contactInfo = {
   },
 }
 
-export const variants: Variants = {
-  initial: {
-    opacity: 0,
-    y: 50,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: 'easeInOut',
-    },
-  },
-}
-
 export const resumeDesc: languageText = {
   en: 'My resume, for those that like to personally download my data',
   jp: '個人的に私のデータをダウンロードしたい人のための私の履歴書',
