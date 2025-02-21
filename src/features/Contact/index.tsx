@@ -1,3 +1,3 @@
-import Contact from './loadable'
+import Contact from './Contact'
 
 export default Contact

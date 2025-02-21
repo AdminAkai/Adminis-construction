@@ -1,3 +1,3 @@
-import Main from './loadable'
+import Main from './Main'
 
 export default Main
