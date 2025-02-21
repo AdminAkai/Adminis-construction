@@ -27,7 +27,7 @@ const About: FC = () => {
           <span>{PageHeader[lang]}</span> <Adminis />
         </div>
         {aboutSummaries.map(({ header, summary }) => (
-          <div>
+          <div key={`${header[lang]}`}>
             <h3 className={styles['about-summary-header']}>{header[lang]}</h3>
             <p className={styles['about-summary-text']}>{summary[lang]}</p>
           </div>
