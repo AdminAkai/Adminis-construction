@@ -13,7 +13,7 @@
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 1rem;
+  font-size: 3rem;
   color: var(--text-primary);
 }
 
@@ -23,9 +23,9 @@
   border: 0;
   border-bottom: 2px solid var(--text-primary);
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--text-primary);
-  padding: 7px 0;
+  padding: 8px 0;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -35,7 +35,7 @@
 }
 
 .custom-form-input::placeholder-shown ~ label {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   cursor: text;
   top: 20px;
 }

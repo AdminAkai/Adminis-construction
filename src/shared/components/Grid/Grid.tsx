@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useMemo } from 'react'
+import { FC, PropsWithChildren } from 'react'
 
 import styles from './grid.module.css'
 
@@ -7,7 +7,7 @@ type GridProps = {
 }
 
 const Grid: FC<PropsWithChildren<GridProps>> = ({ children, panels }) => {
-  const splitPanels = useMemo(() => Math.ceil(Math.sqrt(panels)), [panels])
+  const splitPanels = Math.ceil(Math.sqrt(panels))
 
   return (
     <div

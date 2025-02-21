@@ -1,4 +1,3 @@
-import { Variants } from 'framer-motion'
 import { languageText } from 'src/shared/types'
 
 export const FormInputs = [

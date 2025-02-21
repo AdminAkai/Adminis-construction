@@ -1,4 +1,3 @@
-import { Variants } from 'framer-motion'
 import CustomLink from 'src/shared/components/CustomLink'
 import { GridItemsType, languageText } from 'src/shared/types'
 

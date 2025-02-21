@@ -1,4 +1,12 @@
 .navbar-adminis {
+  font-size: 1.5rem;
+  text-decoration: none;
+  user-select: none;
+  color: var(--text-primary);
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4375rem;
   position: relative;
   user-select: none;
   border: 3px solid var(--text-primary);
