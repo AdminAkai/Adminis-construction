@@ -2,10 +2,6 @@ import { FC, PropsWithChildren } from 'react'
 import styles from './customButton.module.css'
 
 import PacmanLoader from 'react-spinners/PacmanLoader'
-import { Mode } from 'fs'
-import { selectMode } from 'src/shared/redux/settingsSlice/settingsSelectors'
-import { useAppSelector } from 'src/shared/redux/store'
-import theme from 'src/shared/lib/theme'
 
 type CustomButtonProps = {
   type: 'button' | 'submit' | 'reset' | undefined
@@ -17,11 +13,14 @@ const CustomButton: FC<PropsWithChildren<CustomButtonProps>> = ({
   type,
   loading,
 }) => {
-  const mode: Mode = useAppSelector(selectMode)
   return (
     <button type={type} className={styles['custom-button-container']}>
       {loading ? (
-        <PacmanLoader size={10} margin={0} color={theme[mode].Adminis} />
+        <PacmanLoader
+          size={10}
+          margin={0}
+          style={{ color: 'var(--text-primary)' }}
+        />
       ) : (
         children
       )}

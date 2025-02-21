@@ -17,6 +17,7 @@
 
 .landing-projects {
   background-color: var(--background-primary);
+  transition: background-color 3s ease;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
