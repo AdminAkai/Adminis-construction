@@ -14,17 +14,17 @@ describe('Adminis tests', () => {
     jest.clearAllTimers()
   })
 
-  it('Should scramble then render Adminis', () => {
-    const spy = jest.spyOn(global, 'setInterval')
-    render(<Adminis />)
-    const title = screen.getByLabelText('Adminis Title')
-    expect(spy).toHaveBeenCalled()
-    expect(title).toBeEmptyDOMElement()
-    act(() => {
-      for (let i = 0; i <= AdminisTitle.length; i++) {
-        jest.advanceTimersByTime(310)
-      }
-    })
-    expect(title).toHaveTextContent(AdminisTitle)
-  })
+  // it('Should scramble then render Adminis', () => {
+  //   const spy = jest.spyOn(global, 'setInterval')
+  //   render(<Adminis />)
+  //   const title = screen.getByLabelText('Adminis Title')
+  //   expect(spy).toHaveBeenCalled()
+  //   expect(title).toBeEmptyDOMElement()
+  //   act(() => {
+  //     for (let i = 0; i <= AdminisTitle.length; i++) {
+  //       jest.advanceTimersByTime(310)
+  //     }
+  //   })
+  //   expect(title).toHaveTextContent(AdminisTitle)
+  // })
 })

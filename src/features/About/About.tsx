@@ -12,7 +12,7 @@ import styles from './about.module.css'
 
 import { GridItems, PageHeader, aboutSummaries, resumeDesc } from './lib'
 
-export const JoshTrinidadPDF = new URL(
+const JoshTrinidadPDF = new URL(
   'src/assets/JoshTrinidadResume.pdf',
   import.meta.url
 ).href

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Landing from './features/Landing'
-import Main from './features/Main'
+import Landing from 'src/features/Landing'
+import Main from 'src/features/Main'
 
 const AppRouter: FC = () => (
   <BrowserRouter>

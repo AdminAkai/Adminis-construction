@@ -11,11 +11,6 @@ import FormInput from 'src/shared/components/FormInput'
 import CustomButton from 'src/shared/components/CustomButton'
 import { redirect } from 'react-router-dom'
 
-export const JoshTrinidadPDF = new URL(
-  'src/assets/JoshTrinidadResume.pdf',
-  import.meta.url
-).href
-
 const Contact: FC = () => {
   const lang: Language = useAppSelector(selectLanguage)
   const [_, submitAction, isPending] = useActionState(

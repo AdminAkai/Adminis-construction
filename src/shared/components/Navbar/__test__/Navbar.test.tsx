@@ -35,7 +35,7 @@ describe('Navbar tests', () => {
     )
 
     expect(container.firstChild).toHaveStyle(
-      `background-color: ${theme.darkTheme.nav})`
+      `background-color: var(--background-primary)`
     )
 
     expect(screen.getByLabelText('Moon Icon')).toBeVisible()
@@ -45,7 +45,7 @@ describe('Navbar tests', () => {
 
     expect(screen.getByLabelText('Sun Icon')).toBeVisible()
     expect(container.firstChild).toHaveStyle(
-      `background-color: ${theme.lightTheme.nav})`
+      `background-color: var(--background-primary)`
     )
   })
 })
