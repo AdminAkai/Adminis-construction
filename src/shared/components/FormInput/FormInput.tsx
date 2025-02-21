@@ -1,9 +1,5 @@
 import { FC, HTMLInputTypeAttribute } from 'react'
-import {
-  CustomFormInput,
-  CustomFormInputLabel,
-  CustomFormInputSpace,
-} from './styledComponents'
+import styles from './formInput.module.css'
 
 type FormInputProps = {
   label: string
@@ -20,8 +16,9 @@ const FormInput: FC<FormInputProps> = ({
   required,
   disabled,
 }) => (
-  <CustomFormInputSpace>
-    <CustomFormInput
+  <div className={styles['custom-form-input-space']}>
+    <input
+      className={styles['custom-form-input']}
       type={type}
       placeholder={label}
       id={name}
@@ -30,12 +27,13 @@ const FormInput: FC<FormInputProps> = ({
       aria-label={`${label} Form Input`}
       disabled={disabled}
     />
-    <CustomFormInputLabel
+    <label
+      className={styles['custom-form-input-label']}
       htmlFor={name}
       aria-label={`${label} Form Input Label`}
     >
       {label}
-    </CustomFormInputLabel>
-  </CustomFormInputSpace>
+    </label>
+  </div>
 )
 export default FormInput

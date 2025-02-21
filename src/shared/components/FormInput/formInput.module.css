@@ -1,0 +1,63 @@
+.custom-form-input-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding: 15px 0 0;
+  width: 100%;
+}
+
+.custom-form-input-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.custom-form-input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--text-primary);
+  outline: 0;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.custom-form-input::placeholder {
+  color: transparent;
+}
+
+.custom-form-input::placeholder-shown ~ label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.custom-form-input:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(
+    to right,
+    var(--text-secondary),
+    var(--text-primary)
+  );
+  border-image-slice: 1;
+}
+
+.custom-form-input:focus ~ label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
