@@ -1,14 +1,11 @@
 import { FC, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
 import { Language, Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 import Navbar from 'src/shared/components/Navbar'
 
 import { selectMode } from 'src/shared/redux/settingsSlice/settingsSelectors'
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
-
-import theme from 'src/shared/lib/theme'
 
 import { setLanguage } from 'src/shared/redux/settingsSlice/settingsSlice'
 import styles from './main.module.css'
@@ -23,12 +20,10 @@ const Main: FC = () => {
   })
 
   return (
-    <ThemeProvider theme={theme[mode]}>
-      <div data-colormode={mode} className={styles['main-container']}>
-        <Navbar />
-        <Outlet />
-      </div>
-    </ThemeProvider>
+    <div data-colormode={mode} className={styles['main-container']}>
+      <Navbar />
+      <Outlet />
+    </div>
   )
 }
 

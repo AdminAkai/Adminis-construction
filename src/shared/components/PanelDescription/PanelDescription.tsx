@@ -1,11 +1,11 @@
 import { FC, PropsWithChildren } from 'react'
 
-import { ProjectDescription } from './styledComponents'
+import styles from './panelDescription.module.css'
 
 const PanelDescription: FC<PropsWithChildren> = ({ children }) => (
-  <ProjectDescription aria-label='Project Description'>
+  <p className={styles['panel-description']} aria-label='Project Description'>
     {children}
-  </ProjectDescription>
+  </p>
 )
 
 export default PanelDescription
