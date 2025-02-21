@@ -5,21 +5,17 @@ import IconRenderer from 'src/shared/components/IconRenderer'
 import NavbarAdminis from './NavbarAdminis'
 import NavLangSetting from './NavLangSetting'
 
-import { NavbarContainer, NavbarOptions } from './styledComponents'
+import styles from './navbar.module.css'
 
 const Navbar: FC = () => {
   return (
-    <NavbarContainer
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <nav className={styles.navbar}>
       <NavbarAdminis />
-      <NavbarOptions>
+      <div className={styles['navbar-options']}>
         <NavLangSetting />
         <IconRenderer />
-      </NavbarOptions>
-    </NavbarContainer>
+      </div>
+    </nav>
   )
 }
 

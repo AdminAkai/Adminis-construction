@@ -1,7 +1,4 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
-
-export const NavbarContainer = styled(motion.nav)`
+.navbar {
   position: absolute;
   height: 100px;
   top: 0;
@@ -12,16 +9,19 @@ export const NavbarContainer = styled(motion.nav)`
   background-color: transparent;
   padding: 2rem 3rem;
   overflow: hidden;
-  /* backdrop-filter: blur(12px); */
   transition: background-color 3s ease;
+}
 
-  @media screen and (max-width: 959px) {
-    background-color: var(--background-primary);
-  }
-`
-export const NavbarOptions = styled.div`
+.navbar-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-`
+}
+
+@media screen and (max-width: 959px) {
+  .navbar {
+    position: sticky;
+    backdrop-filter: blur(12px);
+  }
+}

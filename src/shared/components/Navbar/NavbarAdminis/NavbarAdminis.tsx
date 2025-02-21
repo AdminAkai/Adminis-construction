@@ -1,12 +1,11 @@
 import { FC } from 'react'
 
 import CustomLink from '../../CustomLink'
-
-import { AdminisContainer } from './styledComponents'
+import styles from './navbarAdminis.module.css'
 
 const NavbarAdminis: FC = () => (
   <CustomLink to='/' noUnderline nav ariaLabel='home-navbar-link'>
-    <AdminisContainer>&lambda;dminis</AdminisContainer>
+    <h1 className={styles['navbar-adminis']}>&lambda;dminis</h1>
   </CustomLink>
 )
 

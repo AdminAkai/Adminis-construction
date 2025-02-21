@@ -6,7 +6,7 @@ import { setMode } from 'src/shared/redux/settingsSlice/settingsSlice'
 import { Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 import { renderIcon } from './lib'
-import { IconButton } from './styledComponents'
+import styles from './iconRenderer.module.css'
 
 const IconRenderer: FC = () => {
   const dispatch = useAppDispatch()
@@ -24,9 +24,13 @@ const IconRenderer: FC = () => {
   const CurrentIcon = renderIcon[mode]
 
   return (
-    <IconButton onClick={handleChangeTheme} aria-label='Icon Button'>
+    <button
+      className={styles['icon-button']}
+      onClick={handleChangeTheme}
+      aria-label='Icon Button'
+    >
       <CurrentIcon mode={mode} />
-    </IconButton>
+    </button>
   )
 }
 

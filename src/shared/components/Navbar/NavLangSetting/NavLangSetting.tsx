@@ -5,7 +5,7 @@ import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 
-import { LanguageIcon } from './styledComponents'
+import styles from './navLangSetting.module.css'
 
 const NavLangSetting: FC = (): ReactNode => {
   const dispatch = useAppDispatch()
@@ -21,9 +21,9 @@ const NavLangSetting: FC = (): ReactNode => {
   }
 
   return (
-    <LanguageIcon onClick={handleChangeLang}>
+    <div className={styles['language-icon']} onClick={handleChangeLang}>
       {lang?.toUpperCase()}
-    </LanguageIcon>
+    </div>
   )
 }
 

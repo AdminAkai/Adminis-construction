@@ -1,6 +1,4 @@
-import styled from 'styled-components'
-
-export const IconButton = styled.button`
+.icon-button {
   background: none;
   color: inherit;
   border: none;
@@ -8,4 +6,4 @@ export const IconButton = styled.button`
   font: inherit;
   cursor: pointer;
   outline: inherit;
-`
+}
