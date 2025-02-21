@@ -18,13 +18,13 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width: var(--mobile-media-query)) {
+@media screen and (max-width: 959px) {
   .main-grid {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 1.5rem;
   }
 }

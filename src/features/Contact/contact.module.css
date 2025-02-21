@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   scroll-snap-align: center;
+  background-color: var(--background-primary);
 }
 
 .contact-info {
@@ -29,7 +30,7 @@
   text-align: left;
 }
 
-@media screen and (max-width: var(--mobile-media-query)) {
+@media screen and (max-width: 959px) {
   .contact-container {
     height: auto;
     text-align: center;
@@ -37,11 +38,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0;
+    padding: 1.5rem;
   }
 
   .contact-header {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
   .contact-summary {
@@ -50,5 +51,6 @@
 
   .contact-summary-header {
     text-align: center;
+    font-size: 1.5rem;
   }
 }

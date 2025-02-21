@@ -1,8 +1,4 @@
 .landing-container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
@@ -20,6 +16,7 @@
 }
 
 .landing-projects {
+  background-color: var(--background-primary);
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
@@ -56,22 +53,18 @@
   text-align: left;
 }
 
-@media screen and (max-width: var(--mobile-media-query)) {
+@media screen and (max-width: 959px) {
   .landing-container {
-    padding: 1.5rem;
+    overflow: visible;
   }
 
   .landing-logo {
-    height: auto;
     padding: 1.5rem;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 1.5rem;
   }
 
   .landing-projects {
-    padding: 0;
-    height: 100vh;
+    padding: 1.5rem;
+    height: auto;
   }
 
   .landing-title {

@@ -14,6 +14,10 @@ export const NavbarContainer = styled(motion.nav)`
   overflow: hidden;
   /* backdrop-filter: blur(12px); */
   transition: background-color 3s ease;
+
+  @media screen and (max-width: 959px) {
+    background-color: var(--background-primary);
+  }
 `
 export const NavbarOptions = styled.div`
   display: flex;

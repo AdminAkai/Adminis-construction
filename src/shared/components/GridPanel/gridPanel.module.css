@@ -26,7 +26,7 @@
   transition: background-color 25ms ease-in-out;
 }
 
-  @media screen and (max-width: var(--mobile-media-query)) {
+  @media screen and (max-width: 959px) {
     .grid-panel-box {
       margin-top: 1rem;
       width: 100%;
