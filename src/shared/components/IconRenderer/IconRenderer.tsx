@@ -29,7 +29,7 @@ const IconRenderer: FC = () => {
       onClick={handleChangeTheme}
       aria-label='Icon Button'
     >
-      <CurrentIcon mode={mode} />
+      <CurrentIcon />
     </button>
   )
 }
