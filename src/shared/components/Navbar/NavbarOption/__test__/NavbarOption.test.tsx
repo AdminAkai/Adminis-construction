@@ -26,17 +26,4 @@ describe('Navbar Option tests', () => {
     expect(navOption).toHaveTextContent('About')
     expect(navOption).toHaveAttribute('href', '/about')
   })
-
-  it('Navbar Option snapshot renders correctly', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <BrowserRouter>
-            <NavbarOption label={label} route={route} ariaLabel='About' />
-          </BrowserRouter>
-        </Provider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })

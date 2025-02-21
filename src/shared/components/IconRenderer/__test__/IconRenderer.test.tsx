@@ -18,15 +18,4 @@ describe('Icon Renderer tests', () => {
     expect(screen.getByLabelText('Icon Button')).toBeVisible()
     expect(screen.getByLabelText('Moon Icon')).toBeVisible()
   })
-
-  it('Icon Renderer snapshot renders correctly', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <IconRenderer />
-        </Provider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })

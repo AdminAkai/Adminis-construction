@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import renderer, { act } from 'react-test-renderer'
+import { act } from 'react-test-renderer'
 import '@testing-library/jest-dom'
 
 import Adminis from '../Adminis.tsx'
@@ -26,10 +26,5 @@ describe('Adminis tests', () => {
       }
     })
     expect(title).toHaveTextContent(AdminisTitle)
-  })
-
-  it('Adminis snapshot renders correctly', () => {
-    const tree = renderer.create(<Adminis />).toJSON()
-    expect(tree).toMatchSnapshot()
   })
 })

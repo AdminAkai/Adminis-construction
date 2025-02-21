@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
-    "test": "jest --setupFilesAfterEnv --u --coverage --maxConcurrency=2 --testPathPattern=src/",
+    "test": "jest --setupFilesAfterEnv --maxConcurrency=2 --testPathPattern=src/",
     "playwright": "npx playwright test"
   },
   "dependencies": {

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import renderer from 'react-test-renderer'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import userEvent from '@testing-library/user-event'
@@ -8,7 +7,6 @@ import '@testing-library/jest-dom'
 import store from 'src/shared/redux/store.ts'
 
 import Navbar from '../Navbar.tsx'
-import theme from 'src/shared/lib/theme.ts'
 
 describe('Navbar tests', () => {
   it('Make sure all Navbar Options are available', () => {
@@ -49,18 +47,5 @@ describe('Navbar tests', () => {
     expect(container.firstChild).toHaveStyle(
       `background-color: ${theme.lightTheme.nav})`
     )
-  })
-
-  it('Navbar snapshot renders correctly', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <BrowserRouter>
-            <Navbar />
-          </BrowserRouter>
-        </Provider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
   })
 })

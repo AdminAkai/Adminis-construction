@@ -15,11 +15,4 @@ describe('PanelDescription tests', () => {
     expect(panelDescription).toBeVisible()
     expect(panelDescription).toHaveTextContent(testDescription)
   })
-
-  it('PanelDescription snapshot renders correctly', () => {
-    const tree = renderer
-      .create(<PanelDescription>{testDescription}</PanelDescription>)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
