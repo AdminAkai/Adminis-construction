@@ -6,7 +6,7 @@ import { useAppSelector } from 'src/shared/redux/store'
 import styles from './contact.module.css'
 
 import { contactInfo, FormInputs } from './lib'
-import FormSpace from 'src/shared/components/FormSpace/FormSpace'
+import FormSpace from 'src/shared/components/FormSpace'
 import FormInput from 'src/shared/components/FormInput'
 import CustomButton from 'src/shared/components/CustomButton'
 import { redirect } from 'react-router-dom'

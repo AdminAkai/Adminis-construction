@@ -1,4 +1,3 @@
-import CustomLink from 'src/shared/components/CustomLink'
 import { GridItemsType, languageText } from 'src/shared/types'
 
 export const GridItems: GridItemsType = [
@@ -12,7 +11,6 @@ export const GridItems: GridItemsType = [
       to: 'https://www.linkedin.com/in/josh-adrian-trinidad/',
       ariaLabel: 'LinkedIn-Josh-Adrian-Trinidad',
     },
-    Link: CustomLink,
   },
   {
     name: 'Github',
@@ -24,7 +22,6 @@ export const GridItems: GridItemsType = [
       to: 'https://github.com/AdminAkai',
       ariaLabel: 'Github-Josh-Adrian-Trinidad',
     },
-    Link: CustomLink,
   },
 ]
 

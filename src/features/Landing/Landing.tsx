@@ -16,8 +16,8 @@ import {
 import ProjectCard from './ProjectCard'
 
 import { loadingStyles, subtitle, underConstruction } from './lib'
-import About from '../About'
-import Contact from '../Contact'
+import About from 'src/features/About'
+import Contact from 'src/features/Contact'
 import ScrambleText from 'src/shared/components/ScrambleText'
 import { PuffLoader } from 'react-spinners'
 import styles from './landing.module.css'
@@ -54,7 +54,7 @@ const Landing: FC = () => {
         ) : (
           <Grid panels={githubRepos.length}>
             {githubRepos.map((repo, index) => (
-              <ProjectCard key={`${name}-${index}`} {...repo} />
+              <ProjectCard key={`github-project-${index}`} {...repo} />
             ))}
           </Grid>
         )}

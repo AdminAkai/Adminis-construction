@@ -11,6 +11,7 @@ import { useAppSelector } from 'src/shared/redux/store'
 import styles from './about.module.css'
 
 import { GridItems, PageHeader, aboutSummaries, resumeDesc } from './lib'
+import CustomLink from 'src/shared/components/CustomLink'
 
 const JoshTrinidadPDF = new URL(
   'src/assets/JoshTrinidadResume.pdf',
@@ -27,16 +28,16 @@ const About: FC = () => {
           <span>{PageHeader[lang]}</span> <Adminis />
         </div>
         {aboutSummaries.map(({ header, summary }) => (
-          <div key={`${header[lang]}`}>
+          <div key={`${header.en}`}>
             <h3 className={styles['about-summary-header']}>{header[lang]}</h3>
             <p className={styles['about-summary-text']}>{summary[lang]}</p>
           </div>
         ))}
       </div>
       <Grid panels={GridItems.length}>
-        {GridItems.map(({ name, description, props, Link }, index) => (
+        {GridItems.map(({ name, description, props }, index) => (
           <GridPanel key={`${name}-${index}`}>
-            <Link {...props}>{name}</Link>
+            <CustomLink {...props}>{name}</CustomLink>
             <PanelDescription>{description[lang]}</PanelDescription>
           </GridPanel>
         ))}
