@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react'
-import { CustomButtonContainer } from './styledComponents'
+import styles from './customButton.module.css'
 
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import { Mode } from 'fs'
@@ -19,13 +19,13 @@ const CustomButton: FC<PropsWithChildren<CustomButtonProps>> = ({
 }) => {
   const mode: Mode = useAppSelector(selectMode)
   return (
-    <CustomButtonContainer type={type}>
+    <button type={type} className={styles['custom-button-container']}>
       {loading ? (
         <PacmanLoader size={10} margin={0} color={theme[mode].Adminis} />
       ) : (
         children
       )}
-    </CustomButtonContainer>
+    </button>
   )
 }
 export default CustomButton

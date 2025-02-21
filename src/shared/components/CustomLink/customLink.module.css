@@ -1,0 +1,25 @@
+.custom-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  user-select: none;
+  color: var(--text-primary);
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4375rem;
+}
+
+.custom-link::after {
+    display: block;
+    content: '';
+    border-bottom: 0.13rem solid var(--text-primary);
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-link-active {
+  transform: scaleX(1);
+}
+
+.custon-link-underline {
+  transform: scaleX(1);
+}
