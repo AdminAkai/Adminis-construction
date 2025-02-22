@@ -40,6 +40,27 @@
   top: 20px;
 }
 
+.custom-form-input:not(:placeholder-shown) {
+  padding-bottom: 6px;
+  border-width: 3px;
+  border-image: linear-gradient(
+    to right,
+    var(--text-secondary),
+    var(--text-primary)
+  );
+  border-image-slice: 1;
+}
+
+.custom-form-input:not(:placeholder-shown) ~ label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
 .custom-form-input:focus {
   padding-bottom: 6px;
   font-weight: 700;
