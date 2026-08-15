@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import styles from './navbarAdminis.module.css'
+import styles from './NavbarAdminis.module.css'
 import ScrambleText from '../../ScrambleText'
 
 const NavbarAdminis: FC = () => (

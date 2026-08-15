@@ -10,5 +10,5 @@
   position: relative;
   user-select: none;
   border: 3px solid var(--text-primary);
-  padding: 6px 4px 4px 4px;
+  padding: 8px 12px 8px 12px;
 }
