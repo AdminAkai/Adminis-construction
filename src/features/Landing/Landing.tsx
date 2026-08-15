@@ -10,7 +10,7 @@ import { subtitle, underConstruction } from './lib'
 import ScrambleText from 'src/shared/components/ScrambleText'
 import styles from './landing.module.css'
 
-const test = ['you.', 'systems.', 'people.', 'communities.', 'commerce.']
+const test = ['you', 'systems', 'people', 'communities', 'commerce']
 
 const Landing: FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -36,6 +36,7 @@ const Landing: FC = () => {
             <ScrambleText text={subtitle[lang]} startOnLoad lang={lang} />
             &nbsp;
             <ScrambleText text={test[currentIndex]} startOnLoad lang={lang} />
+            &#46;
           </div>
           <div className={styles['landing-construction']}>
             <ScrambleText
