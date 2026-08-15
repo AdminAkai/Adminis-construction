@@ -47,7 +47,7 @@ const Landing: FC = () => {
           </div>
         </div>
       </div>
-      <div className={styles['landing-projects']}>test</div>
+      <div className={styles['landing-projects']}></div>
     </div>
   )
 }
