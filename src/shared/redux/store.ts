@@ -1,7 +1,7 @@
 import { configureStore, Tuple } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
-import createSagaMiddleware from '@redux-saga/core'
+import createSagaMiddleware from 'redux-saga'
 import { all } from 'redux-saga/effects'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'

@@ -5,7 +5,7 @@ const AdminisTitle = 'λdminis'
 
 const Adminis: FC = () => (
   <span style={{ userSelect: 'none' }} aria-label='Adminis Title'>
-    <ScrambleText text={AdminisTitle} />
+    <ScrambleText text={AdminisTitle} startOnLoad />
   </span>
 )
 

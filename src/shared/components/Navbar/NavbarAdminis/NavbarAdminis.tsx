@@ -1,9 +1,10 @@
 import { FC } from 'react'
 
 import styles from './navbarAdminis.module.css'
+import ScrambleText from '../../ScrambleText'
 
 const NavbarAdminis: FC = () => (
-  <h1 className={styles['navbar-adminis']}>&lambda;dminis</h1>
+  <ScrambleText className={styles['navbar-adminis']} text='&lambda;dminis' />
 )
 
 export default NavbarAdminis
