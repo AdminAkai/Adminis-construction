@@ -1,24 +1,23 @@
 :root {
   font-family: ui-monospace, "SF Mono", monospace;
+  /* Half Life Color Palette */
   --orange: rgb(251, 126, 20);
-  --black: rgb(23, 24, 26);
   --dark-gray: rgb(21, 21, 21);
   --gray: rgb(41, 41, 41);
-  --white: rgb(204, 204, 204);
 }
 
 [data-colormode='light'] {
-  --background-primary: var(--white);
+  --background-primary: var(--gray);
   --nav-primary: var(--gray);
   --text-primary: var(--orange);
   --text-secondary: var(--gray);
 }
 
 [data-colormode='dark'] {
-  --background-primary: var(--black);
+  --background-primary: var(--dark-gray);
   --nav-primary: var(--orange);
   --text-primary: var(--orange);
-  --text-secondary: var(--white);
+  --text-secondary: var(--gray);
 }
 
 *,
@@ -32,7 +31,7 @@
   box-sizing: border-box;
   scrollbar-width: auto;
   scrollbar-color: var(--text-primary);
-  transition: scrollbar-color 3s ease;
+  transition: scrollbar-color 2s ease;
 }
 
 *::-webkit-scrollbar {
@@ -41,12 +40,12 @@
 
 *::-webkit-scrollbar-track {
   background-color: var(--background-primary);
-  transition: background-color 3s ease;
+  transition: background-color 2s ease;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--text-primary);
-  transition: background-color 3s ease;
+  transition: background-color 2s ease;
   border-radius: 10px;
   border: 4px solid var(--background-primary);
 }
