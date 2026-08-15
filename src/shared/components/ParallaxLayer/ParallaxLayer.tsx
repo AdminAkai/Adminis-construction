@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react'
 
 import styles from './ParallaxLayer.module.css'
 
-interface ParallaxLayerProps {
+type ParallaxLayerProps = {
   depth: number
   className: string
 }

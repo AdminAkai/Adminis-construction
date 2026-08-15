@@ -1,4 +1,4 @@
-interface ILandingInitialState {
+type ILandingInitialState = {
   githubRepos: any[]
   loading: boolean
   error: boolean

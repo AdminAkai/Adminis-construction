@@ -7,14 +7,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--background-primary);
   padding: 2rem 3rem;
   overflow: hidden;
   transition: background-color 3s ease;
   backdrop-filter: blur(12px);
   padding-left: 20%;
   padding-right: 20%;
-  border-bottom: 1px solid var(--nav-primary);
+  border-bottom: 1px solid rgb(251, 126, 20, 0.2);
 }
 
 .navbar-options {

@@ -4,23 +4,20 @@ import { getRandomLetter } from 'src/shared/utils/stringUtils'
 
 const useHackerScramble = (
   initialWord: string,
-  start: boolean = false,
-  reset: boolean = false,
+  scrambling: boolean,
   lang: string = Language.EN
 ): string => {
   const [word, setWord] = useState<string>(initialWord)
   const interval = useRef<number>(undefined)
 
   useEffect(() => {
-    if (reset) {
-      setWord(initialWord)
-      return
-    }
+    let count: number = 0
+    let globalCount: number = 0
+    let canChange: boolean = false
 
-    if (start) {
-      let count: number = 0
-      let globalCount: number = 0
-      let canChange: boolean = false
+    if (scrambling || word !== initialWord) {
+      clearInterval(interval.current)
+      interval.current = undefined
       interval.current = setInterval(() => {
         let newWord: string = ''
         for (let i = 0; i < initialWord.length; i++) {
@@ -47,6 +44,7 @@ const useHackerScramble = (
           canChange = false
           count = 0
           globalCount = 0
+          setWord(initialWord)
           clearInterval(interval.current)
           interval.current = undefined
         }
@@ -57,7 +55,7 @@ const useHackerScramble = (
       clearInterval(interval.current)
       interval.current = undefined
     }
-  }, [start, initialWord, reset])
+  }, [scrambling, initialWord])
 
   return word
 }

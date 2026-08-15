@@ -1,29 +1,23 @@
 .landing-container {
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
+  min-height: 100vh;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
 }
 
 .landing-logo {
+  width: 100%;
+  min-height: 100vh;
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   display: flex;
   text-align: left;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.landing-projects {
-  background-color: var(--background-primary);
-  transition: background-color 3s ease;
-  scroll-snap-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 8rem;
 }
 
 .landing-title {
@@ -32,7 +26,6 @@
   color: var(--text-primary);
   text-align: center;
 }
-
 
 .landing-subtext {
   display: flex;
@@ -43,15 +36,28 @@
 }
 
 .landing-subtitle {
-  font-size: 3rem;
-  color: var(--text-primary);
-  text-align: left;
-}
-
-.landing-construction {
   font-size: 2rem;
   color: var(--text-primary);
   text-align: left;
+  letter-spacing: 0.16em;
+}
+
+.landing-construction {
+  font-size: 1rem;
+  color: var(--text-primary);
+  text-align: left;
+  letter-spacing: 0.16em;
+}
+
+.landing-projects {
+  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 959px) {
@@ -62,7 +68,6 @@
 
   .landing-logo {
     padding: 1.5rem;
-    height: calc(100vh - 100px);
   }
 
   .landing-projects {
@@ -72,16 +77,16 @@
 
   .landing-title {
     height: auto;
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .landing-subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   .landing-construction {
-    font-size: 1rem;
+    font-size: 0.5rem;
     text-align: center;
   }
 }

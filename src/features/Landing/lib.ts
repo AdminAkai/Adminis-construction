@@ -1,7 +1,10 @@
-import { languageText } from 'src/shared/types'
+export type languageText = {
+  en: string
+  jp: string
+}
 
 export const subtitle: languageText = {
-  en: 'Administrate you.',
+  en: 'Administrate',
   jp: '君を管理する。',
 }
 

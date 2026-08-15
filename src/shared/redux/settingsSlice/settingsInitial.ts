@@ -8,7 +8,7 @@ export enum Language {
   JP = 'jp',
 }
 
-interface ISettingsInitialState {
+type ISettingsInitialState = {
   mode: Mode
   language: Language
 }

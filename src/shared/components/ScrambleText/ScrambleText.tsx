@@ -16,19 +16,16 @@ const ScrambleText: FC<ScrambleTextProps> = ({
   startOnLoad = false,
   ...rest
 }) => {
-  const [start, setStart] = useState<boolean>(startOnLoad)
-  const [reset, setReset] = useState<boolean>(false)
+  const [scrambling, setScrambling] = useState<boolean>(startOnLoad)
 
-  const scrambledText = useHackerScramble(text, start, reset, lang)
+  const scrambledText = useHackerScramble(text, scrambling, lang)
 
   const handleMouseEnter = () => {
-    setReset(false)
-    setStart(true)
+    setScrambling(true)
   }
 
   const handleMouseLeave = () => {
-    setStart(false)
-    setReset(true)
+    setScrambling(false)
   }
 
   return (

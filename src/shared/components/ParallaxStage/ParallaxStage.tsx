@@ -7,7 +7,7 @@ import useParallaxVars from 'src/shared/hooks/useParallaxVars'
 
 import styles from './ParallaxStage.module.css'
 
-interface ParallaxStageProps {
+type ParallaxStageProps = {
   smoothing?: number
 }
 

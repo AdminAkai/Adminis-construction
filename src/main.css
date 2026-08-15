@@ -1,10 +1,10 @@
 :root {
-  font-family: 'Blender Pro';
-  --orange: #FB7E14;
-  --black: #000000;
-  --dark-gray: #151515;
-  --gray: #292929;
-  --white: #cccccc;
+  font-family: ui-monospace, "SF Mono", monospace;
+  --orange: rgb(251, 126, 20);
+  --black: rgb(23, 24, 26);
+  --dark-gray: rgb(21, 21, 21);
+  --gray: rgb(41, 41, 41);
+  --white: rgb(204, 204, 204);
 }
 
 [data-colormode='light'] {
@@ -15,7 +15,7 @@
 }
 
 [data-colormode='dark'] {
-  --background-primary: var(--gray);
+  --background-primary: var(--black);
   --nav-primary: var(--orange);
   --text-primary: var(--orange);
   --text-secondary: var(--white);
