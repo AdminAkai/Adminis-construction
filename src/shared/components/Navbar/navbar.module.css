@@ -1,5 +1,6 @@
 .navbar {
   position: absolute;
+  z-index: 20;
   height: 100px;
   top: 0;
   display: flex;

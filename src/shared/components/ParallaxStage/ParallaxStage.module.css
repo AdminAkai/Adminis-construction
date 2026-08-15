@@ -1,0 +1,41 @@
+.parallax-stage {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;      /* or whatever height fits where you're using it */
+  overflow: hidden;    /* clips the layers so they don't spill outside on drift */
+  pointer-events: none;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;           /* sits above the layers, which are position: absolute */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: auto; /* keep actual content clickable */
+}
+
+.layer-back {
+  /* background:
+    radial-gradient(circle at 50% 50%, var(--text-secondary), transparent 20%),
+    radial-gradient(circle at 70% 70%, var(--background-primary), transparent 55%);
+    opacity: 0.05; */
+}
+
+.layer-mid {
+  background-image: radial-gradient(var(--text-primary) 1px, transparent 1.5px);
+  background-size: 44px 44px;
+  opacity: 0.5;
+}
+
+.layer-front {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(110,231,183,0.35), transparent 70%);
+  filter: blur(10px);
+}

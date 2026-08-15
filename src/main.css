@@ -4,7 +4,7 @@
   --black: #000000;
   --dark-gray: #151515;
   --gray: #292929;
-  --white: #FFFFFF;
+  --white: #cccccc;
 }
 
 [data-colormode='light'] {

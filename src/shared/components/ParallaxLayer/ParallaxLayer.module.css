@@ -1,0 +1,6 @@
+.parallax-layer {
+  position: absolute;
+  inset: -10%;   /* slightly oversized so translation never reveals an edge */
+  pointer-events: none; /* keep parallax background from intercepting the UI */
+  will-change: transform;
+}

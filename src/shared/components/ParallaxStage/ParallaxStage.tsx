@@ -5,8 +5,10 @@ import ParallaxLayer from '../ParallaxLayer'
 
 import useParallaxVars from 'src/shared/hooks/useParallaxVars'
 
+import styles from './ParallaxStage.module.css'
+
 interface ParallaxStageProps {
-  smoothing: number
+  smoothing?: number
 }
 
 const ParallaxStage: FC<PropsWithChildren<ParallaxStageProps>> = ({
@@ -16,11 +18,11 @@ const ParallaxStage: FC<PropsWithChildren<ParallaxStageProps>> = ({
   const stageRef = useParallaxVars(smoothing)
 
   return (
-    <div ref={stageRef} className='parallax-stage'>
-      <ParallaxLayer depth={8} className='layer-back' />
-      <ParallaxLayer depth={20} className='layer-mid' />
-      <ParallaxLayer depth={38} className='layer-front' />
-      <div className='parallax-content'>{children}</div>
+    <div ref={stageRef} className={styles['parallax-stage']}>
+      {/* <ParallaxLayer depth={8} className={styles['layer-back']} /> */}
+      <ParallaxLayer depth={20} className={styles['layer-mid']} />
+      {/* <ParallaxLayer depth={38} className={styles['layer-front']} /> */}
+      <div className={styles['parallax-content']}>{children}</div>
     </div>
   )
 }

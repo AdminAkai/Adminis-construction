@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from 'react'
 
 import { Link } from 'react-router-dom'
-import styles from './customLink.module.css'
+import styles from './CustomLink.module.css'
 
 export type CustomLinkProps = {
   to: string

@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
 
 import { setLanguage } from 'src/shared/redux/settingsSlice/settingsSlice'
 import styles from './main.module.css'
+import ParallaxStage from 'src/shared/components/ParallaxStage'
 
 const Main: FC = () => {
   const dispatch = useAppDispatch()
@@ -22,7 +23,9 @@ const Main: FC = () => {
   return (
     <div data-colormode={mode} className={styles['main-container']}>
       <Navbar />
-      <Outlet />
+      <ParallaxStage>
+        <Outlet />
+      </ParallaxStage>
     </div>
   )
 }
