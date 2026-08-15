@@ -6,6 +6,14 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 ## Changelog
 
+**08/15/2026 v0.11**:
+
+- Adjusted scramble text (again) as well as color palette
+
+- Adjusted project infrastructure
+
+- Parallax Stage setup properly
+
 **08/15/2026 v0.1**:
 
 - Nuked other pages in the UI but Landing
