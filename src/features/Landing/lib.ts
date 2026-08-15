@@ -3,9 +3,19 @@ export type languageText = {
   jp: string
 }
 
-export const subtitle: languageText = {
+export type languageTextArray = {
+  en: string[]
+  jp: string[]
+}
+
+export const tagline: languageText = {
   en: 'Administrate',
-  jp: '君を管理する。',
+  jp: '君を管理する',
+}
+
+export const taglineSubjects: languageTextArray = {
+  en: ['you', 'systems', 'people', 'communities', 'commerce'],
+  jp: ['自', '制度', '人々', '社会', '交易'],
 }
 
 export const underConstruction: languageText = {

@@ -6,11 +6,9 @@ import { useAppSelector } from 'src/shared/redux/store'
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 
-import { subtitle, underConstruction } from './lib'
+import { tagline, taglineSubjects, underConstruction } from './lib'
 import ScrambleText from 'src/shared/components/ScrambleText'
 import styles from './landing.module.css'
-
-const test = ['you', 'systems', 'people', 'communities', 'commerce']
 
 const Landing: FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -19,7 +17,7 @@ const Landing: FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % test.length)
+      setCurrentIndex((prev) => (prev + 1) % taglineSubjects[lang].length)
     }, 2000)
 
     return () => clearInterval(interval)
@@ -33,9 +31,13 @@ const Landing: FC = () => {
         </div>
         <div className={styles['landing-subtext']}>
           <div className={styles['landing-subtitle']}>
-            <ScrambleText text={subtitle[lang]} startOnLoad lang={lang} />
-            &nbsp;
-            <ScrambleText text={test[currentIndex]} startOnLoad lang={lang} />
+            <ScrambleText text={tagline[lang]} startOnLoad lang={lang} />
+            {lang === Language.EN ? ' ' : null}
+            <ScrambleText
+              text={taglineSubjects[lang][currentIndex]}
+              startOnLoad
+              lang={lang}
+            />
             &#46;
           </div>
           <div className={styles['landing-construction']}>
