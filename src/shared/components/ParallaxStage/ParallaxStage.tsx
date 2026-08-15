@@ -19,9 +19,7 @@ const ParallaxStage: FC<PropsWithChildren<ParallaxStageProps>> = ({
 
   return (
     <div ref={stageRef} className={styles['parallax-stage']}>
-      {/* <ParallaxLayer depth={8} className={styles['layer-back']} /> */}
-      <ParallaxLayer depth={20} className={styles['layer-mid']} />
-      {/* <ParallaxLayer depth={38} className={styles['layer-front']} /> */}
+      <ParallaxLayer depth={20} className={styles['layer-dots']} />
       <div className={styles['parallax-content']}>{children}</div>
     </div>
   )

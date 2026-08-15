@@ -19,23 +19,8 @@
   pointer-events: auto; /* keep actual content clickable */
 }
 
-.layer-back {
-  /* background:
-    radial-gradient(circle at 50% 50%, var(--text-secondary), transparent 20%),
-    radial-gradient(circle at 70% 70%, var(--background-primary), transparent 55%);
-    opacity: 0.05; */
-}
-
-.layer-mid {
+.layer-dots {
   background-image: radial-gradient(var(--text-primary) 1px, transparent 1.5px);
   background-size: 44px 44px;
-  opacity: 0.5;
-}
-
-.layer-front {
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(110,231,183,0.35), transparent 70%);
-  filter: blur(10px);
+  opacity: 0.2;
 }
