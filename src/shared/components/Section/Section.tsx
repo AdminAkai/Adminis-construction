@@ -1,9 +1,17 @@
-import { FC, PropsWithChildren } from 'react'
+import { ComponentPropsWithoutRef, forwardRef } from 'react'
 
 import styles from './Section.module.css'
 
-const Section: FC<PropsWithChildren> = ({ children }) => (
-  <section className={styles.section}>{children}</section>
+type SectionProps = ComponentPropsWithoutRef<'section'>
+
+const Section = forwardRef<HTMLElement, SectionProps>(
+  ({ children, ...rest }, ref) => (
+    <section className={styles.section} ref={ref} {...rest}>
+      {children}
+    </section>
+  )
 )
+
+Section.displayName = 'Section'
 
 export default Section

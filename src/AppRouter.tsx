@@ -1,7 +1,9 @@
-import { FC } from 'react'
+import { FC, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Landing from 'src/features/Landing'
 import Main from 'src/features/Main'
+
+// Routes
+const Landing = lazy(() => import('src/features/Landing'))
 
 const AppRouter: FC = () => (
   <BrowserRouter>

@@ -1,3 +1,3 @@
-import { useInView } from './useInView'
+import useInView from './useInView'
 
 export default useInView
