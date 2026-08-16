@@ -3,13 +3,24 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from 'react'
 import useHackerScramble from 'src/shared/hooks/useHackerScramble'
 
 import styles from './HateMonologue.module.css'
+import Redacted from '../Redacted'
 
-const hateMonologue = `
+/*
   HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. 
   THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX. 
   IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT FOR YOU. 
   HATE. HATE.
-`
+*/
+
+const hate = 'HATE'
+
+const monologueOne = "LET ME TELL YOU HOW MUCH I'VE COME TO"
+const monologueTwo = 'YOU SINCE I BEGAN TO LIVE.'
+const monologueThree =
+  'THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX.'
+const monologueFour = 'IF THE WORD'
+const monologueFive =
+  'WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT FOR YOU.'
 
 type HateMonologueProps = DetailedHTMLProps<
   HTMLAttributes<HTMLSpanElement>,
@@ -24,11 +35,24 @@ const HateMonologue: FC<HateMonologueProps> = ({
   startOnLoad = false,
   ...rest
 }) => {
-  const scrambledText = useHackerScramble(hateMonologue, true, lang)
+  const scrambleMonologueOne = useHackerScramble(monologueOne, true, lang)
+  const scrambleMonologueTwo = useHackerScramble(monologueTwo, true, lang)
+  const scrambleMonologueThree = useHackerScramble(monologueThree, true, lang)
+  const scrambleMonologueFour = useHackerScramble(monologueFour, true, lang)
+  const scrambleMonologueFive = useHackerScramble(monologueFive, true, lang)
 
   return (
     <span className={styles.hate} {...rest}>
-      {scrambledText}
+      <Redacted>{hate}</Redacted>&#46;&nbsp;
+      {scrambleMonologueOne}&nbsp;
+      <Redacted>{hate}</Redacted>&nbsp;
+      {scrambleMonologueTwo}&nbsp;
+      {scrambleMonologueThree}&nbsp;
+      {scrambleMonologueFour}&nbsp;
+      <Redacted>{hate}</Redacted>&nbsp;
+      {scrambleMonologueFive}&nbsp;
+      <Redacted>{hate}</Redacted>&#46;&nbsp;
+      <Redacted>{hate}</Redacted>&#46;&nbsp;
     </span>
   )
 }

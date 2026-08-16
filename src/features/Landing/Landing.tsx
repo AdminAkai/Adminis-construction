@@ -58,7 +58,7 @@ const Landing: FC = () => {
         <div className={styles['landing-hate']}>
           <HateMonologue startOnLoad lang={lang} />
         </div>
-        <PageMark top={330} left={1000}>
+        <PageMark top={120} left={1000}>
           THE CHINESE ROOM / EP-02
         </PageMark>
       </div>

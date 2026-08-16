@@ -1,8 +1,9 @@
 .hate {
   display: block;
-  height: 400px;
+  height: 800px;
+  width: 50%;
   text-wrap: wrap;
-  padding-left: 4rem;
-  padding-right: 4rem;
   word-wrap: break-word;
+  transition: scrollbar-color 2s ease;
+  color: var(--text-primary);
 }
