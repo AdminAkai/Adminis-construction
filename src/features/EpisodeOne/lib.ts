@@ -1,12 +1,4 @@
-export type languageText = {
-  en: string
-  jp: string
-}
-
-export type languageTextArray = {
-  en: string[]
-  jp: string[]
-}
+import { languageText, languageTextArray } from 'src/shared/types'
 
 export const tagline: languageText = {
   en: 'Administrate',
@@ -22,11 +14,4 @@ export const taglineSubjects: languageTextArray = {
 export const underConstruction: languageText = {
   en: 'Under Construction (・-・)7',
   jp: '建設中 (・-・)7',
-}
-
-export const loadingStyles = {
-  width: '100%',
-  height: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
 }

@@ -1,0 +1,12 @@
+.landing-hate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 959px) {
+}
