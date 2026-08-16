@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-.landing-logo {
+.landing-section {
   width: 100%;
   min-height: 100vh;
   height: 100vh;
@@ -22,7 +22,6 @@
 
 .landing-title {
   font-size: 8rem;
-  text-align: left;
   color: var(--text-primary);
   text-align: center;
 }
@@ -37,7 +36,8 @@
 
 .landing-subtitle {
   font-size: 2rem;
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
+  color: white;
   text-align: left;
   letter-spacing: 0.16em;
 }
@@ -49,15 +49,12 @@
   letter-spacing: 0.16em;
 }
 
-.landing-projects {
-  min-height: 100vh;
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8rem;
-  box-sizing: border-box;
+.landing-hate {
+  width: 100%;
+  font-size: 2rem;
+  text-align: left;
+  color: var(--text-primary);
+  overflow: hidden;
 }
 
 @media screen and (max-width: 959px) {
@@ -66,13 +63,8 @@
     height: auto;
   }
 
-  .landing-logo {
+  .landing-section {
     padding: 1.5rem;
-  }
-
-  .landing-projects {
-    padding: 1.5rem;
-    height: auto;
   }
 
   .landing-title {

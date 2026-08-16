@@ -1,0 +1,8 @@
+.hate {
+  display: block;
+  height: 400px;
+  text-wrap: wrap;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  word-wrap: break-word;
+}

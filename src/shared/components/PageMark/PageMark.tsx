@@ -1,18 +1,30 @@
-import { FC, PropsWithChildren } from 'react'
+import { DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren } from 'react'
 
-type PageMarkProps = {
-  xPosition: string
-  yPosition: string
+import styles from './PageMark.module.css'
+
+type PageMarkProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+> & {
+  top?: string | number
+  bottom?: string | number
+  left?: string | number
+  right?: string | number
 }
 
 const PageMark: FC<PropsWithChildren<PageMarkProps>> = ({
-  xPosition,
-  yPosition,
+  top = 0,
+  bottom = 0,
+  left = 0,
+  right = 0,
+  children,
+  ...rest
 }) => {
-  console.log(xPosition)
-  console.log(yPosition)
-
-  return <div></div>
+  return (
+    <div style={{ top, bottom, left, right }} className={styles.mark} {...rest}>
+      {children}
+    </div>
+  )
 }
 
 export default PageMark

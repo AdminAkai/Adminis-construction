@@ -5,7 +5,8 @@ import { getRandomLetter } from 'src/shared/utils/stringUtils'
 const useHackerScramble = (
   initialWord: string,
   scrambling: boolean,
-  lang: string = Language.EN
+  lang: string = Language.EN,
+  loop?: boolean
 ): string => {
   const [word, setWord] = useState<string>(initialWord)
   const interval = useRef<number>(undefined)
@@ -15,7 +16,7 @@ const useHackerScramble = (
     let globalCount: number = 0
     let canChange: boolean = false
 
-    if (scrambling || word !== initialWord) {
+    if (scrambling || word !== initialWord || loop) {
       clearInterval(interval.current)
       interval.current = undefined
       interval.current = setInterval(() => {
@@ -44,9 +45,11 @@ const useHackerScramble = (
           canChange = false
           count = 0
           globalCount = 0
-          setWord(initialWord)
-          clearInterval(interval.current)
-          interval.current = undefined
+          if (!loop) {
+            setWord(initialWord)
+            clearInterval(interval.current)
+            interval.current = undefined
+          }
         }
       }, 48)
     }

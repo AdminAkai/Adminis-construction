@@ -9,6 +9,8 @@ import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors
 import { tagline, taglineSubjects, underConstruction } from './lib'
 import ScrambleText from 'src/shared/components/ScrambleText'
 import styles from './landing.module.css'
+import PageMark from 'src/shared/components/PageMark/PageMark'
+import HateMonologue from 'src/shared/components/HateMonologue'
 
 const Landing: FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -25,7 +27,7 @@ const Landing: FC = () => {
 
   return (
     <div className={styles['landing-container']}>
-      <div className={styles['landing-logo']}>
+      <div className={styles['landing-section']}>
         <div className={styles['landing-title']}>
           <Adminis />
         </div>
@@ -48,8 +50,18 @@ const Landing: FC = () => {
             />
           </div>
         </div>
+        <PageMark top={400} left={1000}>
+          λ / EP-01
+        </PageMark>
       </div>
-      <div className={styles['landing-projects']}></div>
+      <div className={styles['landing-section']}>
+        <div className={styles['landing-hate']}>
+          <HateMonologue startOnLoad lang={lang} />
+        </div>
+        <PageMark top={330} left={1000}>
+          THE CHINESE ROOM / EP-02
+        </PageMark>
+      </div>
     </div>
   )
 }
