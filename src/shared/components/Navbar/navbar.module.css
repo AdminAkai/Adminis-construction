@@ -14,7 +14,7 @@
   backdrop-filter: blur(12px);
   padding-left: 20%;
   padding-right: 20%;
-  border-bottom: 1px solid rgb(251, 126, 20, 0.2);
+  border-bottom: 1px solid var(--orange-muted);
 }
 
 .navbar-options {

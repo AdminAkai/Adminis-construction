@@ -6,6 +6,16 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 ## Changelog
 
+**08/17/2026 v0.2**:
+
+- Version jump
+
+- Added scrolling link ticker in the Navbar
+
+- Cleaned up unused components
+
+- Added new redux state and adjusted redux tree for a future feature
+
 **08/15/2026 v0.11**:
 
 - Adjusted scramble text (again) as well as color palette

@@ -1,22 +1,25 @@
 import { FC, PropsWithChildren } from 'react'
 
 import { Link } from 'react-router-dom'
-import styles from './CustomLink.module.css'
 
-export type CustomLinkProps = {
+import styles from './TickerLink.module.css'
+
+export type TickerLinkProps = {
   to: string
   ariaLabel: string
+  current?: boolean
   nav?: boolean
 }
 
-const CustomLink: FC<PropsWithChildren<CustomLinkProps>> = ({
-  nav,
+const TickerLink: FC<PropsWithChildren<TickerLinkProps>> = ({
   to,
   children,
   ariaLabel,
+  current,
+  nav,
 }) => (
   <Link
-    className={styles['custom-link']}
+    className={`${styles['ticker-link']}  ${current && styles['ticker-current-link']}`}
     to={to}
     target={nav ? undefined : '_blank'}
     aria-label={ariaLabel}
@@ -25,4 +28,4 @@ const CustomLink: FC<PropsWithChildren<CustomLinkProps>> = ({
   </Link>
 )
 
-export default CustomLink
+export default TickerLink

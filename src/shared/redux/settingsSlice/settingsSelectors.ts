@@ -13,3 +13,8 @@ export const selectLanguage = createSelector(
   [selectSettingsSliceReducer],
   (state) => state.language
 )
+
+export const selectBroken = createSelector(
+  [selectSettingsSliceReducer],
+  (state) => state.broken
+)

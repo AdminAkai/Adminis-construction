@@ -1,0 +1,50 @@
+.ticker {
+  width: 100%;
+  max-width: 720px;
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--background-primary);
+  border-top: 1px solid var(--orange-muted);
+  padding: 14px 0;
+  position: relative;
+}
+
+.ticker::before,
+.ticker::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--background-primary), transparent);
+}
+
+.ticker::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--background-primary), transparent);
+}
+
+.ticker-track.paused,
+.ticker:hover .ticker-track.hover-pause {
+  animation-play-state: paused;
+}
+
+ .ticker-track {
+  display: inline-flex;
+  width: max-content;
+  animation: ticker-scroll 18s linear infinite;
+}
+
+.ticker-track.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

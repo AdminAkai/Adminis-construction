@@ -1,24 +1,17 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Language, Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
+import { Mode } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 import Navbar from 'src/shared/components/Navbar'
 
 import { selectMode } from 'src/shared/redux/settingsSlice/settingsSelectors'
-import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
+import { useAppSelector } from 'src/shared/redux/store'
 
-import { setLanguage } from 'src/shared/redux/settingsSlice/settingsSlice'
 import styles from './main.module.css'
 import ParallaxStage from 'src/shared/components/ParallaxStage'
 
 const Main: FC = () => {
-  const dispatch = useAppDispatch()
-
   const mode: Mode = useAppSelector(selectMode)
-
-  useEffect(() => {
-    dispatch(setLanguage(Language.EN))
-  })
 
   return (
     <div data-colormode={mode} className={styles['main-container']}>

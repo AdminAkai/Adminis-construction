@@ -1,0 +1,30 @@
+.ticker-link {
+  position: relative;
+  /* padding-bottom: 4px; */
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--lightest-gray);
+}
+
+.ticker-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.ticker-link:hover::after {
+  transform: scaleX(1);
+}
+
+.ticker-current-link {
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--orange);
+}

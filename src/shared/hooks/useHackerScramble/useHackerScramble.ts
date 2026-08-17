@@ -6,6 +6,7 @@ const useHackerScramble = (
   initialWord: string,
   scrambling: boolean,
   lang: string = Language.EN,
+  speed: number = 48,
   loop?: boolean
 ): string => {
   const [word, setWord] = useState<string>(initialWord)
@@ -51,7 +52,7 @@ const useHackerScramble = (
             interval.current = undefined
           }
         }
-      }, 48)
+      }, speed)
     }
 
     return () => {

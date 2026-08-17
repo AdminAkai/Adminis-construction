@@ -9,6 +9,6 @@
   line-height: 1.4375rem;
   position: relative;
   user-select: none;
-  border: 3px solid var(--text-primary);
+  border: 1px solid var(--text-primary);
   padding: 8px 12px 8px 12px;
 }

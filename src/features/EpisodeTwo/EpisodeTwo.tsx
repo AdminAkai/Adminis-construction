@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 
 import HateMonologue from 'src/shared/components/HateMonologue'
 import PageMark from 'src/shared/components/PageMark/PageMark'
@@ -6,23 +6,30 @@ import Section from 'src/shared/components/Section/Section'
 
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
-import { useAppSelector } from 'src/shared/redux/store'
+import { useAppDispatch, useAppSelector } from 'src/shared/redux/store'
+import { setBroken } from 'src/shared/redux/settingsSlice/settingsSlice'
 import useInView from 'src/shared/hooks/useInView'
 
 import styles from './EpisodeTwo.module.css'
 
 const EpisodeTwo: FC = () => {
+  const dispatch = useAppDispatch()
+
   const lang: Language = useAppSelector(selectLanguage)
 
   const [ref, isInView] = useInView()
 
+  useEffect(() => {
+    dispatch(setBroken(isInView))
+  }, [isInView])
+
   return (
     <Section ref={ref}>
       <div className={styles['landing-hate']}>
-        <HateMonologue startOnLoad lang={lang} />
+        <HateMonologue startOnLoad={isInView} lang={lang} />
       </div>
-      <PageMark top={220} left={1000}>
-        THE CHINESE ROOM / EP-02
+      <PageMark top={230} left={984}>
+        HATE / EP-02
       </PageMark>
     </Section>
   )

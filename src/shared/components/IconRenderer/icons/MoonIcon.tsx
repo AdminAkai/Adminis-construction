@@ -5,7 +5,7 @@ const MoonIcon: FC = () => (
     viewBox='0 0 24 24'
     width='24'
     height='24'
-    style={{ marginBottom: '0.19rem', cursor: 'pointer', userSelect: 'none' }}
+    style={{ cursor: 'pointer', userSelect: 'none' }}
     aria-label='Moon Icon'
   >
     <path
