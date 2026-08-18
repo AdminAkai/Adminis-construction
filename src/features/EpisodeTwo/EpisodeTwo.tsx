@@ -28,9 +28,7 @@ const EpisodeTwo: FC = () => {
       <div className={styles['landing-hate']}>
         <HateMonologue startOnLoad={isInView} lang={lang} />
       </div>
-      <PageMark top={230} left={984}>
-        HATE / EP-02
-      </PageMark>
+      <PageMark>HATE / EP-02</PageMark>
     </Section>
   )
 }

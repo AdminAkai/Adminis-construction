@@ -50,9 +50,7 @@ const EpisodeOne: FC = () => {
           />
         </div>
       </div>
-      <PageMark top={400} left={1000}>
-        λ / EP-01
-      </PageMark>
+      <PageMark>λ / EP-01</PageMark>
     </Section>
   )
 }

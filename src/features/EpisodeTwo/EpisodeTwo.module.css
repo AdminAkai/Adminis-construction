@@ -9,4 +9,7 @@
 }
 
 @media screen and (max-width: 959px) {
+  .landing-hate {
+    font-size: 1rem;
+  }
 }

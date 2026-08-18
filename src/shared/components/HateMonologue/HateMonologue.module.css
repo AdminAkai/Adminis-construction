@@ -7,3 +7,10 @@
   transition: scrollbar-color 2s ease;
   color: var(--text-primary);
 }
+
+@media screen and (max-width: 959px) {
+  .hate {
+    height: 400px;
+    width: 80%;
+  }
+}
