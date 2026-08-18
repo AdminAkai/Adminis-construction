@@ -28,3 +28,9 @@
   padding-bottom: 4px;
   border-bottom: 1px solid var(--orange);
 }
+
+@media screen and (max-width: 959px) {
+  .ticker-link {
+    font-size: 10px;
+  }
+}

@@ -17,3 +17,10 @@
   color: var(--gray);
   margin-left: 22px;
 }
+
+@media screen and (max-width: 959px) {
+  .ticker-item {
+    font-size: 10px;
+    padding: 0 16px;
+  }
+}

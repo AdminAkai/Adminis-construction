@@ -28,11 +28,12 @@
 
 @media screen and (max-width: 959px) {
   .ep-one {
+    min-height: auto;
     height: auto;
     font-size: 2rem;
   }
 
-  .ep-one-taglin {
+  .ep-one-tagline {
     font-size: 1rem;
     text-align: center;
   }

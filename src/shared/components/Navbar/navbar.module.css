@@ -26,6 +26,9 @@
 
 @media screen and (max-width: 959px) {
   .navbar {
-    position: sticky;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 80px;
+    gap: 1rem;
   }
 }

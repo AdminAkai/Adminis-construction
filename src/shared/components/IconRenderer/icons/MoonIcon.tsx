@@ -4,7 +4,7 @@ const MoonIcon: FC = () => (
   <svg
     viewBox='0 0 24 24'
     width='24'
-    height='24'
+    height='auto'
     style={{ cursor: 'pointer', userSelect: 'none' }}
     aria-label='Moon Icon'
   >

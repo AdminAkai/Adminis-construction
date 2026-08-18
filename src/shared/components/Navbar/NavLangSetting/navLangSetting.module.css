@@ -9,3 +9,9 @@
   line-height: 1.4375rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 959px) {
+  .language-icon {
+    font-size: 1rem;
+  }
+}

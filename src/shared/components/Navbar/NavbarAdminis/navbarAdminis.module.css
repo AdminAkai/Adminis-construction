@@ -10,5 +10,11 @@
   position: relative;
   user-select: none;
   border: 1px solid var(--text-primary);
-  padding: 8px 12px 8px 12px;
+  padding: 8px 12px;
+}
+
+@media screen and (max-width: 959px) {
+  .navbar-adminis {
+    display: none;
+  }
 }

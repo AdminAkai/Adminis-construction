@@ -9,3 +9,10 @@
   height: 24px;
   width: 24px;
 }
+
+@media screen and (max-width: 959px) {
+  .icon-button {
+    height: 16px;
+    width: 16px;
+  }
+}
