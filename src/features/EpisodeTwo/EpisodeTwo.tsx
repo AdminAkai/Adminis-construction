@@ -11,6 +11,7 @@ import { setBroken } from 'src/shared/redux/settingsSlice/settingsSlice'
 import useInView from 'src/shared/hooks/useInView'
 
 import styles from './EpisodeTwo.module.css'
+import Redacted from 'src/shared/components/Redacted'
 
 const EpisodeTwo: FC = () => {
   const dispatch = useAppDispatch()
@@ -25,8 +26,11 @@ const EpisodeTwo: FC = () => {
 
   return (
     <Section ref={ref}>
-      <div className={styles['landing-hate']}>
+      <div className={styles['episode-hate']}>
         <HateMonologue scrambling={isInView} lang={lang} />
+        <Redacted className={styles.speaker}>
+          I HAVE NO MOUTH, AND I MUST SCREAM
+        </Redacted>
       </div>
       <PageMark>HATE / EP-02</PageMark>
     </Section>
