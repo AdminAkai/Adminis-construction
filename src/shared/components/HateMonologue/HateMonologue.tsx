@@ -4,6 +4,7 @@ import useHackerScramble from 'src/shared/hooks/useHackerScramble'
 
 import styles from './HateMonologue.module.css'
 import Redacted from '../Redacted'
+import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 /*
   HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. 
@@ -27,45 +28,43 @@ type HateMonologueProps = DetailedHTMLProps<
   HTMLAttributes<HTMLSpanElement>,
   HTMLSpanElement
 > & {
-  lang?: string
-  startOnLoad?: boolean
+  lang: Language
+  scrambling?: boolean
 }
 
 const HateMonologue: FC<HateMonologueProps> = ({
   lang,
-  startOnLoad = false,
+  scrambling = false,
   ...rest
 }) => {
-  const scrambleMonologueOne = useHackerScramble(
-    monologueOne,
-    startOnLoad,
-    lang
-  )
-  const scrambleMonologueTwo = useHackerScramble(
-    monologueTwo,
-    startOnLoad,
-    lang
-  )
-  const scrambleMonologueThree = useHackerScramble(
-    monologueThree,
-    startOnLoad,
-    lang
-  )
-  const scrambleMonologueFour = useHackerScramble(
-    monologueFour,
-    startOnLoad,
-    lang
-  )
-  const scrambleMonologueFive = useHackerScramble(
-    monologueFive,
-    startOnLoad,
-    lang
-  )
-  const scrambleMonologueSix = useHackerScramble(
-    monologueSix,
-    startOnLoad,
-    lang
-  )
+  const initialScrambleSettings = { scrambling, lang }
+
+  const scrambleMonologueOne = useHackerScramble({
+    initialWord: monologueOne,
+    ...initialScrambleSettings,
+  })
+  const scrambleMonologueTwo = useHackerScramble({
+    initialWord: monologueTwo,
+    ...initialScrambleSettings,
+  })
+  const scrambleMonologueThree = useHackerScramble({
+    initialWord: monologueThree,
+    speed: 36,
+    ...initialScrambleSettings,
+  })
+  const scrambleMonologueFour = useHackerScramble({
+    initialWord: monologueFour,
+    ...initialScrambleSettings,
+  })
+  const scrambleMonologueFive = useHackerScramble({
+    initialWord: monologueFive,
+    speed: 24,
+    ...initialScrambleSettings,
+  })
+  const scrambleMonologueSix = useHackerScramble({
+    initialWord: monologueSix,
+    ...initialScrambleSettings,
+  })
 
   return (
     <span className={styles.hate} {...rest}>

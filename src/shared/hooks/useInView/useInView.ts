@@ -8,10 +8,7 @@ const useInView = (
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsInView(true)
-        observer.unobserve(entry.target) // animate once, then stop watching
-      }
+      setIsInView(entry.isIntersecting)
     }, options)
 
     if (ref.current) observer.observe(ref.current)

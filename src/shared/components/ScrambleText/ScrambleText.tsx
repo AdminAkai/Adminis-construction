@@ -1,12 +1,13 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, useState } from 'react'
 import useHackerScramble from 'src/shared/hooks/useHackerScramble'
+import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 
 type ScrambleTextProps = DetailedHTMLProps<
   HTMLAttributes<HTMLSpanElement>,
   HTMLSpanElement
 > & {
   text: string
-  lang?: string
+  lang?: Language
   startOnLoad?: boolean
 }
 
@@ -18,7 +19,11 @@ const ScrambleText: FC<ScrambleTextProps> = ({
 }) => {
   const [scrambling, setScrambling] = useState<boolean>(startOnLoad)
 
-  const scrambledText = useHackerScramble(text, scrambling, lang)
+  const scrambledText = useHackerScramble({
+    initialWord: text,
+    scrambling,
+    lang,
+  })
 
   const handleMouseEnter = () => {
     setScrambling(true)

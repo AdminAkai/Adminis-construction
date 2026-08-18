@@ -26,7 +26,7 @@ const EpisodeTwo: FC = () => {
   return (
     <Section ref={ref}>
       <div className={styles['landing-hate']}>
-        <HateMonologue startOnLoad={isInView} lang={lang} />
+        <HateMonologue scrambling={isInView} lang={lang} />
       </div>
       <PageMark>HATE / EP-02</PageMark>
     </Section>

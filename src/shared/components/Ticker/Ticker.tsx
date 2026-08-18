@@ -2,10 +2,8 @@ import { FC, useMemo } from 'react'
 
 import styles from './Ticker.module.css'
 import TickerItem, { TickerItemProps } from './TickerItem'
-import { useAppSelector } from 'src/shared/redux/store'
-import { selectBroken } from 'src/shared/redux/settingsSlice/settingsSelectors'
 
-const tickerItems: Omit<TickerItemProps, 'bracket'>[] = [
+const tickerItems: Omit<TickerItemProps, 'bracket' | 'lang'>[] = [
   {
     text: 'ADMINIS LLC',
   },
@@ -27,10 +25,6 @@ const tickerItems: Omit<TickerItemProps, 'bracket'>[] = [
 ]
 
 const Ticker: FC = () => {
-  const broken = useAppSelector(selectBroken)
-
-  console.log('testing broken status:', broken)
-
   const TickerItems = useMemo(
     () =>
       tickerItems.map((item, index) => (

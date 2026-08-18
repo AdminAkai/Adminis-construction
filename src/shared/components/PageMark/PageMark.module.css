@@ -6,3 +6,9 @@
   bottom: 8%;
   right: 8%;
 }
+
+@media screen and (max-width: 959px) {
+  .mark {
+    font-size: 12px;
+  }
+}
