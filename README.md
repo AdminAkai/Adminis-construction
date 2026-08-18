@@ -6,6 +6,10 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 ## Changelog
 
+**08/18/2026 v0.2**:
+
+- Added "broken" state to navbar during episode 2
+
 **08/17/2026 v0.2**:
 
 - Both episodes that are currently out are mobile friendly and responsive
