@@ -1,16 +1,24 @@
-import { FC, PropsWithChildren } from 'react'
+import { DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren } from 'react'
 
 import styles from './Redacted.module.css'
 
-type RedactedProps = {
+type RedactedProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLSpanElement>,
+  HTMLSpanElement
+> & {
   color?: string
 }
 
 const Redacted: FC<PropsWithChildren<RedactedProps>> = ({
   color = 'black',
   children,
+  ...rest
 }) => (
-  <span style={{ color, backgroundColor: color }} className={styles.redacted}>
+  <span
+    style={{ color, backgroundColor: color }}
+    className={styles.redacted}
+    {...rest}
+  >
     {children}
   </span>
 )

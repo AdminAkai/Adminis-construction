@@ -6,6 +6,7 @@ import styles from './TickerItem.module.css'
 import useHackerScramble from 'src/shared/hooks/useHackerScramble'
 import { useAppSelector } from 'src/shared/redux/store'
 import { selectBroken } from 'src/shared/redux/settingsSlice/settingsSelectors'
+import Redacted from '../../Redacted'
 
 export type TickerItemProps = {
   bracket: string
@@ -17,6 +18,11 @@ const TickerItem: FC<TickerItemProps> = ({ bracket, text, link }) => {
   const broken = useAppSelector(selectBroken)
 
   const contentText = useHackerScramble({ initialWord: text, infinite: broken })
+
+  const contentBracket = useMemo(() => {
+    if (broken) return <Redacted>HATE</Redacted>
+    return bracket
+  }, [bracket, broken])
 
   const content = useMemo(() => {
     if (link)
@@ -30,7 +36,7 @@ const TickerItem: FC<TickerItemProps> = ({ bracket, text, link }) => {
 
   return (
     <div className={styles['ticker-item']}>
-      <span className={styles.bracket}>{bracket}</span>
+      <span className={styles.bracket}>{contentBracket}</span>
       {content}
       <span className={styles.separator}>/</span>
     </div>

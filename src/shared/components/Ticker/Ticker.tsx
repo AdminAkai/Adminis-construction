@@ -2,6 +2,8 @@ import { FC, useMemo } from 'react'
 
 import styles from './Ticker.module.css'
 import TickerItem, { TickerItemProps } from './TickerItem'
+import { useAppSelector } from 'src/shared/redux/store'
+import { selectBroken } from 'src/shared/redux/settingsSlice/settingsSelectors'
 
 const tickerItems: Omit<TickerItemProps, 'bracket' | 'lang'>[] = [
   {
@@ -25,6 +27,8 @@ const tickerItems: Omit<TickerItemProps, 'bracket' | 'lang'>[] = [
 ]
 
 const Ticker: FC = () => {
+  const broken = useAppSelector(selectBroken)
+
   const TickerItems = useMemo(
     () =>
       tickerItems.map((item, index) => (
@@ -40,7 +44,7 @@ const Ticker: FC = () => {
   return (
     <div className={styles.ticker}>
       <div
-        className={`${styles['ticker-track']} ${styles['hover-pause']}`}
+        className={`${styles['ticker-track']} ${styles['hover-pause']} ${broken && styles['reverse']}`}
         id='track'
       >
         {TickerItems}
