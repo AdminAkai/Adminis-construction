@@ -8,6 +8,10 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 **08/17/2026 v0.2**:
 
+- Both episodes that are currently out are mobile friendly and responsive
+
+**08/17/2026 v0.2**:
+
 - Version jump
 
 - Added scrolling link ticker in the Navbar
