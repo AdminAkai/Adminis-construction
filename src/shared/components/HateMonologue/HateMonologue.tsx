@@ -49,7 +49,7 @@ const HateMonologue: FC<HateMonologueProps> = ({
   })
   const scrambleMonologueThree = useHackerScramble({
     initialWord: monologueThree,
-    speed: 36,
+    speed: 30,
     ...initialScrambleSettings,
   })
   const scrambleMonologueFour = useHackerScramble({
@@ -63,6 +63,7 @@ const HateMonologue: FC<HateMonologueProps> = ({
   })
   const scrambleMonologueSix = useHackerScramble({
     initialWord: monologueSix,
+    speed: 72,
     ...initialScrambleSettings,
   })
 
