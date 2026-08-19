@@ -8,6 +8,8 @@ import { selectBroken } from 'src/shared/redux/settingsSlice/settingsSelectors'
 const tickerItems: Omit<TickerItemProps, 'bracket' | 'lang'>[] = [
   {
     text: 'ADMINIS LLC',
+    link: '/',
+    nav: true,
   },
   {
     text: 'GITHUB',
@@ -22,7 +24,9 @@ const tickerItems: Omit<TickerItemProps, 'bracket' | 'lang'>[] = [
     link: 'https://stackoverflow.com/users/21342972/adminakai',
   },
   {
-    text: 'UNDER CONSTRUCTION',
+    text: 'TRANSMISSION',
+    link: '/transmission',
+    nav: true,
   },
 ]
 

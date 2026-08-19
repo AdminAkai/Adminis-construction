@@ -12,9 +12,10 @@ export type TickerItemProps = {
   bracket: string
   text: string
   link?: string
+  nav?: boolean
 }
 
-const TickerItem: FC<TickerItemProps> = ({ bracket, text, link }) => {
+const TickerItem: FC<TickerItemProps> = ({ bracket, text, link, nav }) => {
   const broken = useAppSelector(selectBroken)
 
   const contentText = useHackerScramble({ initialWord: text, infinite: broken })
@@ -27,7 +28,7 @@ const TickerItem: FC<TickerItemProps> = ({ bracket, text, link }) => {
   const content = useMemo(() => {
     if (link)
       return (
-        <TickerLink to={link} ariaLabel={text}>
+        <TickerLink to={link} ariaLabel={text} nav={nav}>
           {contentText}
         </TickerLink>
       )

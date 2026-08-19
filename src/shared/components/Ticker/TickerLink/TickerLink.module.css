@@ -1,10 +1,14 @@
 .ticker-link {
   position: relative;
-  /* padding-bottom: 4px; */
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 0.02em;
   color: var(--lightest-gray);
+}
+
+.ticker-link:visited {
+  text-decoration: none;
+  color: var(--lightest-gray)
 }
 
 .ticker-link::after {

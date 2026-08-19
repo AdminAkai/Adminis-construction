@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from 'react'
 import Adminis from 'src/shared/components/Adminis'
 import PageMark from 'src/shared/components/PageMark/PageMark'
 import ScrambleText from 'src/shared/components/ScrambleText'
+import Section from 'src/shared/components/Section/Section'
 
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { useAppSelector } from 'src/shared/redux/store'
@@ -11,7 +12,6 @@ import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors
 import { taglineSubjects, tagline, underConstruction } from './lib'
 
 import styles from './EpisodeOne.module.css'
-import Section from 'src/shared/components/Section/Section'
 
 const EpisodeOne: FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
