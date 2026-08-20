@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 import PageMark from 'src/shared/components/PageMark/PageMark'
 import Section from 'src/shared/components/Section/Section'
+import TransmissionFormHeader from 'src/shared/components/TransmissionForm/TransmissionFormHeader'
+import TransmissionForm from 'src/shared/components/TransmissionForm'
 
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 import { useAppSelector } from 'src/shared/redux/store'
@@ -46,27 +48,8 @@ const Transmission: FC = () => {
           </div>
         </div>
         <div className={styles['transmission-sector']}>
-          <div className={styles['transmission-form-header']}>
-            <p className={styles['transmission-form-header-title']}>
-              MESSAGE / 3 FIELDS
-            </p>
-            <p className={styles['transmission-form-header-title']}>
-              [CHANNEL OPEN]
-            </p>
-          </div>
-          <form className={styles['transmission-form']}>
-            <label
-              htmlFor='name'
-              className={styles['transmission-form-input-label']}
-            >
-              [01] / NAME
-            </label>
-            <input
-              id='name'
-              className={styles['transmission-form-input']}
-              placeholder='YOUR NAME'
-            ></input>
-          </form>
+          <TransmissionFormHeader />
+          <TransmissionForm />
         </div>
       </div>
       <PageMark>TRANSMISSION / EP-OVA</PageMark>

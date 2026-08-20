@@ -1,0 +1,14 @@
+.transmission-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  color: var(--orange);
+  border-bottom: 1px solid var(--muted);
+}
+
+.transmission-form-header-title {
+  text-shadow: 0 8px 28px 
+  color-mix(in oklch, var(--orange) 18%, transparent);
+}

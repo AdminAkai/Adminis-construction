@@ -60,50 +60,6 @@
   text-decoration: none;
 }
 
-.transmission-form-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 1rem 2rem;
-  color: var(--orange);
-  border-bottom: 1px solid var(--muted);
-}
-
-.transmission-form-header-title {
-  text-shadow: 0 8px 28px 
-  color-mix(in oklch, var(--orange) 18%, transparent);
-}
-
-.transmission-form {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1rem;
-  height: 60%;
-  border-left: 1px solid var(--muted);
-  width: 100%;
-}
-
-.transmission-form-input-label {
-  color: var(--orange);
-  text-shadow: 0 8px 28px 
-  color-mix(in oklch, var(--orange) 18%, transparent);
-}
-
-.transmission-form-input {
-  width: 100%;
-  min-height: 48px;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  letter-spacing: -.01em;
-  caret-color: var(--muted);
-  border-bottom: 1px solid var(--muted);
-}
-
 @media screen and (max-width: 959px) {
   .transmission {
     min-height: auto;
