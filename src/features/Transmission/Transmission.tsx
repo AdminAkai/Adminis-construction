@@ -28,17 +28,19 @@ const Transmission: FC = () => {
     <Section>
       <div className={styles.contact}>
         <div className={styles['contact-sector']}>
-          <h1>[TRANSMISSION / OPEN CHANNEL]</h1>
-          <p>SEND YOUR MESSAGE.</p>
+          <h1 className={styles['contact-title']}>
+            [TRANSMISSION / OPEN CHANNEL]
+          </h1>
+          <p>BROADCAST YOUR SIGNAL.</p>
         </div>
         <div className={styles['contact-sector']}>
           <div className={styles['contact-form-header']}>
-            <p>SIGNAL / 3 FIELDS</p>
+            <p>MESSAGE / 3 FIELDS</p>
             <p>CHANNEL OPEN</p>
           </div>
           <form className={styles['contact-form']}>
             <label htmlFor='test'>test</label>
-            <input id='test'></input>
+            <input id='test' className={styles['contact-form-input']}></input>
             <label htmlFor='test'>test</label>
             <input></input>
           </form>

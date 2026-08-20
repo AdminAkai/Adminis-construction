@@ -9,19 +9,21 @@ type ScrambleTextProps = DetailedHTMLProps<
   text: string
   lang?: Language
   startOnLoad?: boolean
+  scramble?: boolean
 }
 
 const ScrambleText: FC<ScrambleTextProps> = ({
   text,
   lang,
   startOnLoad = false,
+  scramble = false,
   ...rest
 }) => {
   const [scrambling, setScrambling] = useState<boolean>(startOnLoad)
 
   const scrambledText = useHackerScramble({
     initialWord: text,
-    scrambling,
+    scrambling: scrambling || scramble,
     lang,
   })
 

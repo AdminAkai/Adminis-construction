@@ -7,6 +7,7 @@
   border-top: 1px solid var(--orange-muted);
   padding: 14px 0;
   position: relative;
+  transition: background-color 2s ease;
 }
 
 .ticker::before,
@@ -22,11 +23,13 @@
 .ticker::before {
   left: 0;
   background: linear-gradient(90deg, var(--background-primary), transparent);
+  transition: background-color 2s ease;
 }
 
 .ticker::after {
   right: 0;
   background: linear-gradient(270deg, var(--background-primary), transparent);
+  transition: background-color 2s ease;
 }
 
 .ticker-track.paused,

@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  color: white;
+  color: var(--lightest-gray);
 }
 
 .contact-sector {
@@ -15,9 +15,14 @@
   text-align: left;
   height: 100%;
   width: 30%;
-  border-left: 1px solid white;
+  border-left: 1px solid var(--lightest-gray);
   padding: 2rem;
   gap: 1rem;
+}
+
+.contact-title {
+  text-shadow: 0 8px 28px 
+  color-mix(in oklch, var(--lightest-gray) 18%, transparent);
 }
 
 .contact-form-header {
@@ -34,6 +39,10 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
+}
+
+.contact-form-input {
   width: 100%;
 }
 
