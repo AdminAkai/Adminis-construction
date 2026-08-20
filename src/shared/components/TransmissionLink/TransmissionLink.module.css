@@ -1,0 +1,13 @@
+.transmission-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--lightest-gray);
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+.transmission-link:active, .transmission-link:visited {
+  text-decoration: none;
+}

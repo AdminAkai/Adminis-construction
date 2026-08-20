@@ -12,6 +12,7 @@ import { useAppSelector } from 'src/shared/redux/store'
 import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors'
 
 import styles from './Transmission.module.css'
+import TransmissionLink from 'src/shared/components/TransmissionLink'
 
 const Transmission: FC = () => {
   // const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -37,14 +38,7 @@ const Transmission: FC = () => {
             BROADCAST YOUR SIGNAL.
           </p>
           <div className={styles['transmission-links']}>
-            <Link
-              to='https://www.linkedin.com/in/josh-adrian-trinidad/'
-              className={styles['transmission-link']}
-              target='_blank'
-            >
-              LINKEDIN
-              <span>/in/josh-adrian-trinidad/</span>
-            </Link>
+            <TransmissionLink />
           </div>
         </div>
         <div className={styles['transmission-sector']}>

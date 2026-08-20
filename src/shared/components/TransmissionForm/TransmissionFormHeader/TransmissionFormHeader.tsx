@@ -6,7 +6,7 @@ const TransmissionFormHeader: FC = () => {
   return (
     <div className={styles['transmission-form-header']}>
       <p className={styles['transmission-form-header-title']}>
-        MESSAGE / 3 FIELDS
+        CONTENT / 3 FIELDS
       </p>
       <p className={styles['transmission-form-header-title']}>[CHANNEL OPEN]</p>
     </div>

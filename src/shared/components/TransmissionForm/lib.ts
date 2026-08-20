@@ -1,9 +1,24 @@
 import { TransmissionFormInputProps } from './TransmissionFormInput'
 
-export const transmissionFormInputs: TransmissionFormInputProps[] = [
+export const transmissionFormInputs: Omit<
+  TransmissionFormInputProps,
+  'bracket'
+>[] = [
   {
     name: 'name',
     label: 'NAME',
-    placeholder: 'YOUR NAME',
+    placeholder: 'FLESH LABEL',
+  },
+  {
+    name: 'email',
+    label: 'EMAIL',
+    placeholder: 'SIGNAL IDENTIFIER',
+    type: 'email',
+  },
+  {
+    name: 'message',
+    label: 'MESSAGE',
+    placeholder: 'HOW CAN I CONTRIBUTE TO YOUR CAUSE?',
+    type: 'textarea',
   },
 ]
