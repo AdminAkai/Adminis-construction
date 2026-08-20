@@ -1,3 +1,5 @@
-import TransmissionLink from './TransmissionLink'
+import TransmissionLink, { TransmissionLinkProps } from './TransmissionLink'
+
+export type { TransmissionLinkProps }
 
 export default TransmissionLink

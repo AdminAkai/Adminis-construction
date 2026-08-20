@@ -1,17 +1,14 @@
-import { languageText, languageTextArray } from 'src/shared/types'
+import { TransmissionLinkProps } from 'src/shared/components/TransmissionLink'
 
-export const tagline: languageText = {
-  en: 'Administrate',
-  jp: '君を管理する',
-}
-
-export const taglineSubjects: languageTextArray = {
-  en: ['you', 'systems', 'people', 'communities', 'commerce'],
-  // the translations are kept in order ie. en[0] and jp[0] mean the same
-  jp: ['自', '制度', '人々', '社会', '交易'],
-}
-
-export const underConstruction: languageText = {
-  en: 'Under Construction (・-・)7',
-  jp: '建設中 (・-・)7',
-}
+export const transmissionLinks: TransmissionLinkProps[] = [
+  {
+    to: 'https://www.linkedin.com/in/josh-adrian-trinidad',
+    label: 'LINKEDIN',
+    linkText: '/in/josh-adrian-trinidad/',
+  },
+  {
+    to: 'https://github.com/AdminAkai',
+    label: 'GITHUB',
+    linkText: 'AdminAkai',
+  },
+]

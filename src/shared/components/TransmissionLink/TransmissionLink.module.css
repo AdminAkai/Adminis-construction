@@ -6,6 +6,16 @@
   color: var(--lightest-gray);
   text-decoration: none;
   transition: color 300ms ease;
+  border-top: 1px solid var(--muted);
+  padding-top: 1rem;
+}
+
+.transmission-link:hover span {
+  color: var(--orange);
+}
+
+.transmission-text {
+  padding-right: 2rem;
 }
 
 .transmission-link:active, .transmission-link:visited {

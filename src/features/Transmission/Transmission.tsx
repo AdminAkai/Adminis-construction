@@ -13,6 +13,7 @@ import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors
 
 import styles from './Transmission.module.css'
 import TransmissionLink from 'src/shared/components/TransmissionLink'
+import { transmissionLinks } from './lib'
 
 const Transmission: FC = () => {
   // const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -38,7 +39,9 @@ const Transmission: FC = () => {
             BROADCAST YOUR SIGNAL.
           </p>
           <div className={styles['transmission-links']}>
-            <TransmissionLink />
+            {transmissionLinks.map((link) => (
+              <TransmissionLink key={link.linkText} {...link} />
+            ))}
           </div>
         </div>
         <div className={styles['transmission-sector']}>
