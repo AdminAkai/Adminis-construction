@@ -24,7 +24,12 @@ const TransmissionButton: FC = () => {
       onMouseEnter={startScramble}
       onMouseLeave={stopScramble}
     >
-      <ScrambleText text='SIGNAL' startOnLoad scramble={scramble} />
+      <ScrambleText
+        text='SIGNAL'
+        startOnLoad
+        scramble={scramble}
+        className={styles['signal-text']}
+      />
       <BroadcastIcon />
     </Link>
   )
