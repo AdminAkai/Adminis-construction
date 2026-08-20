@@ -35,12 +35,13 @@ const Transmission: FC = () => {
             BROADCAST YOUR SIGNAL.
           </p>
           <div className={styles['transmission-links']}>
-            LINKEDIN
             <Link
               to='https://www.linkedin.com/in/josh-adrian-trinidad/'
               className={styles['transmission-link']}
+              target='_blank'
             >
-              /in/josh-adrian-trinidad/
+              LINKEDIN
+              <span>/in/josh-adrian-trinidad/</span>
             </Link>
           </div>
         </div>
