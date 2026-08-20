@@ -9,20 +9,3 @@
   border-left: 1px solid var(--muted);
   width: 100%;
 }
-
-.transmission-form-input-label {
-  color: var(--orange);
-  text-shadow: 0 8px 28px 
-  color-mix(in oklch, var(--orange) 18%, transparent);
-}
-
-.transmission-form-input {
-  width: 100%;
-  min-height: 48px;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  letter-spacing: -.01em;
-  caret-color: var(--muted);
-  border-bottom: 1px solid var(--muted);
-}
