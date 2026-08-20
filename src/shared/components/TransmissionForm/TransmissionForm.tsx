@@ -1,9 +1,11 @@
 import { FC } from 'react'
 
 import TransmissionFormInput from './TransmissionFormInput'
+import TransmissionButton from '../Navbar/TransmissionButton'
+
+import { transmissionFormInputs } from './lib'
 
 import styles from './TransmissionForm.module.css'
-import { transmissionFormInputs } from './lib'
 
 const TransmissionForm: FC = () => {
   return (
@@ -15,6 +17,7 @@ const TransmissionForm: FC = () => {
           {...input}
         />
       ))}
+      <TransmissionButton style={{ alignSelf: 'flex-end' }} />
     </form>
   )
 }

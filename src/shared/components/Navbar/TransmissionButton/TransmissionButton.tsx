@@ -1,12 +1,18 @@
-import { FC, useState } from 'react'
+import { CSSProperties, FC, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
-import styles from './TransmissionButton.module.css'
 import ScrambleText from '../../ScrambleText'
 import BroadcastIcon from '../../IconRenderer/icons/BroadcastIcon'
 
-const TransmissionButton: FC = () => {
+import styles from './TransmissionButton.module.css'
+
+type TransmissionButtonProps = {
+  hidden?: boolean
+  style?: CSSProperties
+}
+
+const TransmissionButton: FC<TransmissionButtonProps> = ({ hidden, style }) => {
   const [scramble, setScramble] = useState<boolean>(false)
 
   const startScramble = () => {
@@ -19,6 +25,7 @@ const TransmissionButton: FC = () => {
 
   return (
     <Link
+      style={{ display: hidden ? 'none' : 'inline-flex', ...style }}
       to='/transmission'
       className={styles['transmission-button']}
       onMouseEnter={startScramble}
