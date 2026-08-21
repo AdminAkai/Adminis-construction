@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import ScrambleText from '../../ScrambleText'
 import BroadcastIcon from '../../IconRenderer/icons/BroadcastIcon'
 
+import { useAppSelector } from 'src/shared/redux/store'
+import { selectBroken } from 'src/shared/redux/settingsSlice/settingsSelectors'
+
 import styles from './TransmissionButton.module.css'
 
 type TransmissionButtonProps = {
@@ -13,6 +16,7 @@ type TransmissionButtonProps = {
 }
 
 const TransmissionButton: FC<TransmissionButtonProps> = ({ hidden, style }) => {
+  const broken = useAppSelector(selectBroken)
   const [scramble, setScramble] = useState<boolean>(false)
 
   const startScramble = () => {
@@ -36,6 +40,7 @@ const TransmissionButton: FC<TransmissionButtonProps> = ({ hidden, style }) => {
         startOnLoad
         scramble={scramble}
         className={styles['signal-text']}
+        infinite={broken}
       />
       <BroadcastIcon />
     </Link>

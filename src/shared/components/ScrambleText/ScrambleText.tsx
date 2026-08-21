@@ -10,6 +10,7 @@ type ScrambleTextProps = DetailedHTMLProps<
   lang?: Language
   startOnLoad?: boolean
   scramble?: boolean
+  infinite?: boolean
 }
 
 const ScrambleText: FC<ScrambleTextProps> = ({
@@ -17,6 +18,7 @@ const ScrambleText: FC<ScrambleTextProps> = ({
   lang,
   startOnLoad = false,
   scramble = false,
+  infinite = false,
   ...rest
 }) => {
   const [scrambling, setScrambling] = useState<boolean>(startOnLoad)
@@ -25,6 +27,7 @@ const ScrambleText: FC<ScrambleTextProps> = ({
     initialWord: text,
     scrambling: scrambling || scramble,
     lang,
+    infinite,
   })
 
   const handleMouseEnter = () => {
