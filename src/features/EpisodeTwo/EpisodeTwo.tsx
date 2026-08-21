@@ -22,6 +22,10 @@ const EpisodeTwo: FC = () => {
 
   useEffect(() => {
     dispatch(setBroken(isInView))
+
+    return () => {
+      dispatch(setBroken(false))
+    }
   }, [isInView])
 
   return (
