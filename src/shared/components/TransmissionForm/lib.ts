@@ -12,7 +12,13 @@ export const transmissionFormInputs: Omit<
   {
     name: 'email',
     label: 'EMAIL',
-    placeholder: 'SIGNAL IDENTIFIER',
+    placeholder: 'COMMS IDENTIFIER',
+    type: 'email',
+  },
+  {
+    name: 'subject',
+    label: 'SUBJECT',
+    placeholder: 'CONTENT TOPIC - OPTIONAL',
     type: 'email',
   },
   {

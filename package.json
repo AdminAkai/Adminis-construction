@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.14.1",
+    "@marsidev/react-turnstile": "^1.6.0",
     "@redux-saga/types": "^1.4.1",
     "@reduxjs/toolkit": "^2.12.0",
     "@types/react-redux": "^7.1.34",
