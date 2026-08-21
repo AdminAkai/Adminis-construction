@@ -6,6 +6,16 @@ Website deployed on Amazon S3 and Cloudfront, domain from Google Domains, routed
 
 ## Changelog
 
+**08/20/2026 v0.21**:
+
+- Added Transmission episode and form
+
+- Disabled for now as the backend is under construction
+
+- Added new blood red color to theme
+
+- Added Cloudflare Turnstile for security
+
 **08/18/2026 v0.2**:
 
 - Added "broken" state to navbar during episode 2
