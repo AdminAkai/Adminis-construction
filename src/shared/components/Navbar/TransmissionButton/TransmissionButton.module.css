@@ -1,17 +1,17 @@
 .transmission-button {
+  background-color: var(--blood-red);
+  border: 1px solid var(--blood-red);
   box-shadow: 0 8px 28px 
-  color-mix(in oklch, var(--lightest-gray) 18%, transparent);
+  color-mix(in oklch, var(--blood-red) 18%, transparent);
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 0.02em;
-  background-color: var(--lightest-gray);
   min-height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 0 12px;
-  border: 1px solid var(--lightest-gray);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -29,11 +29,12 @@
 }
 
 .transmission-button-disabled {
-  background-color: var(--blood-red);
-  border: 1px solid var(--blood-red);
+  background-color: var(--light-gray);
+  border: 1px solid var(--light-gray);
   box-shadow: 0 8px 28px 
-  color-mix(in oklch, var(--blood-red) 18%, transparent);
+  color-mix(in oklch, var(--light-gray) 18%, transparent);
   text-decoration: none;
+  pointer-events: none;
 }
 
 .transmission-button-disabled:hover {

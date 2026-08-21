@@ -1,8 +1,8 @@
 .section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
   scroll-snap-align: start;
   display: flex;
   text-align: left;

@@ -1,5 +1,5 @@
 .transmission-form {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -20,10 +20,6 @@
 
 @media screen and (max-width: 959px) {
   .transmission-form {
-    padding: 1rem;
     height: auto;
-  }
-
-  .transmission-turnstile {
   }
 }

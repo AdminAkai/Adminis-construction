@@ -2,7 +2,7 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 100vh;      /* or whatever height fits where you're using it */
+  height: 100dvh;      
   overflow: hidden;    /* clips the layers so they don't spill outside on drift */
   pointer-events: none;
 }
