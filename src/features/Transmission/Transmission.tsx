@@ -14,6 +14,7 @@ import { selectLanguage } from 'src/shared/redux/settingsSlice/settingsSelectors
 import styles from './Transmission.module.css'
 import TransmissionLink from 'src/shared/components/TransmissionLink'
 import { transmissionLinks } from './lib'
+import ScrambleText from 'src/shared/components/ScrambleText'
 
 const Transmission: FC = () => {
   // const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -35,9 +36,13 @@ const Transmission: FC = () => {
           <h1 className={styles['transmission-title']}>
             [TRANSMISSION / OPEN CHANNEL]
           </h1>
-          <p className={styles['transmission-subtitle']}>
-            BROADCAST YOUR SIGNAL.
-          </p>
+          <div className={styles['transmission-subtitle']}>
+            <p>BROADCAST YOUR&nbsp;</p>
+            <div>
+              <ScrambleText text='SIGNAL' startOnLoad />
+              &#46;
+            </div>
+          </div>
           <div className={styles['transmission-links']}>
             {transmissionLinks.map((link) => (
               <TransmissionLink key={link.linkText} {...link} />
