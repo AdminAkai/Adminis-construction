@@ -1,12 +1,7 @@
 import { FC, SVGProps } from 'react'
 
 const BroadcastIcon: FC<SVGProps<SVGElement>> = () => (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 0 256 256'
-    width={24}
-    height='auto'
-  >
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width={24}>
     <rect width='24' height='24' fill='none' />
     <circle
       cx='128'
@@ -14,41 +9,41 @@ const BroadcastIcon: FC<SVGProps<SVGElement>> = () => (
       r='32'
       fill='none'
       stroke='currentColor'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-      stroke-width='16'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='16'
     />
     <path
       d='M181.67,80a71.94,71.94,0,0,1,0,96'
       fill='none'
       stroke='currentColor'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-      stroke-width='16'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='16'
     />
     <path
       d='M74.33,176a71.94,71.94,0,0,1,0-96'
       fill='none'
       stroke='currentColor'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-      stroke-width='16'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='16'
     />
     <path
       d='M208,49.62a111.88,111.88,0,0,1,0,156.76'
       fill='none'
       stroke='currentColor'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-      stroke-width='16'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='16'
     />
     <path
       d='M48,206.38A111.88,111.88,0,0,1,48,49.62'
       fill='none'
       stroke='currentColor'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-      stroke-width='16'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='16'
     />
   </svg>
 )

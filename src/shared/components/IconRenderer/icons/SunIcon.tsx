@@ -4,7 +4,6 @@ const SunIcon: FC<SVGProps<SVGElement>> = () => (
   <svg
     viewBox='0 0 24 24'
     width='24'
-    height='auto'
     style={{ cursor: 'pointer', userSelect: 'none' }}
     aria-label='Sun Icon'
   >
