@@ -51,8 +51,27 @@
 
 @media screen and (max-width: 959px) {
   .transmission {
+    flex-direction: column;
     min-height: auto;
     height: auto;
     font-size: 2rem;
+    overflow: scroll;
+  }
+
+  .transmission-sector {
+    width: 100%;
+  }
+
+  .transmission-title {
+    font-size: 12px;
+  }
+
+  .transmission-subtitle {
+    font-size: 1rem;
+    height: auto;
+  }
+
+  .transmission-links {
+    padding: 0;
   }
 }

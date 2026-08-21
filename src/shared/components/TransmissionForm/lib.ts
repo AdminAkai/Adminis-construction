@@ -1,5 +1,7 @@
 import { TransmissionFormInputProps } from './TransmissionFormInput'
 
+export const turnstileKey = '0x4AAAAAAEXGoO0_Z4IaUzAC'
+
 export const transmissionFormInputs: Omit<
   TransmissionFormInputProps,
   'bracket'

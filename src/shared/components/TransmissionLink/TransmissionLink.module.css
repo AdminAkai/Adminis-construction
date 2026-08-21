@@ -26,3 +26,13 @@
 .transmission-link:active, .transmission-link:visited {
   text-decoration: none;
 }
+
+@media screen and (max-width: 959px) {
+  .transmission-link {
+    font-size: 12px;
+  }
+
+  .transmission-text {
+    font-size: 12px;
+  }
+}

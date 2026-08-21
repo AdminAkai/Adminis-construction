@@ -5,7 +5,7 @@ import { Turnstile } from '@marsidev/react-turnstile'
 import TransmissionFormInput from './TransmissionFormInput'
 import TransmissionButton from '../Navbar/TransmissionButton'
 
-import { transmissionFormInputs } from './lib'
+import { transmissionFormInputs, turnstileKey } from './lib'
 
 import styles from './TransmissionForm.module.css'
 
@@ -21,9 +21,9 @@ const TransmissionForm: FC = () => {
           {...input}
         />
       ))}
-      <div style={{ height: 48, width: '100%', marginBottom: '1rem' }}>
+      <div className={styles['transmission-turnstile']}>
         <Turnstile
-          siteKey='0x4AAAAAAEXGoO0_Z4IaUzAC'
+          siteKey={turnstileKey}
           onSuccess={setTurnstileToken}
           options={{ theme: 'dark', size: 'flexible' }}
         />

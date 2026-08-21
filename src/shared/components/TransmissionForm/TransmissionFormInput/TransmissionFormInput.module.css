@@ -16,11 +16,22 @@
   border: 0;
   background: transparent;
   color: var(--muted);
-  letter-spacing: -.01em;
+  letter-spacing: 0.16em;
   caret-color: var(--muted);
   border-bottom: 1px solid var(--muted);
 }
 
 .transmission-form-input-label {
   color: var(--blood-red);
+}
+
+@media screen and (max-width: 959px) {
+ .transmission-form-input-label {
+  font-size: 12px;
+  gap: 0;
+ }
+
+ .transmission-form-input {
+  font-size: 12px;
+ }
 }

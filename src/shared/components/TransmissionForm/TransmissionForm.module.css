@@ -11,3 +11,19 @@
   border-bottom: 1px solid var(--muted);
   width: 100%;
 }
+
+.transmission-turnstile {
+  height: 48;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 959px) {
+  .transmission-form {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .transmission-turnstile {
+  }
+}
