@@ -12,10 +12,15 @@ import styles from './TransmissionButton.module.css'
 
 type TransmissionButtonProps = {
   hidden?: boolean
+  disabled?: boolean
   style?: CSSProperties
 }
 
-const TransmissionButton: FC<TransmissionButtonProps> = ({ hidden, style }) => {
+const TransmissionButton: FC<TransmissionButtonProps> = ({
+  hidden,
+  disabled,
+  style,
+}) => {
   const broken = useAppSelector(selectBroken)
   const [scramble, setScramble] = useState<boolean>(false)
 
@@ -31,7 +36,7 @@ const TransmissionButton: FC<TransmissionButtonProps> = ({ hidden, style }) => {
     <Link
       style={{ display: hidden ? 'none' : 'inline-flex', ...style }}
       to='/transmission'
-      className={styles['transmission-button']}
+      className={`${styles['transmission-button']} ${disabled && styles['transmission-button-disabled']}`}
       onMouseEnter={startScramble}
       onMouseLeave={stopScramble}
     >

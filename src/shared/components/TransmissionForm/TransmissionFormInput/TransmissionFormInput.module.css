@@ -20,3 +20,7 @@
   caret-color: var(--muted);
   border-bottom: 1px solid var(--muted);
 }
+
+.transmission-form-input-label {
+  color: var(--blood-red);
+}

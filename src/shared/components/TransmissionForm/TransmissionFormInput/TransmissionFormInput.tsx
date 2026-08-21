@@ -27,6 +27,8 @@ const TransmissionFormInput: FC<TransmissionFormInputProps> = ({
         required
         rows={4}
         maxLength={5000}
+        // disable for now as backend is in progress
+        disabled
       />
     ) : (
       <input
@@ -35,6 +37,8 @@ const TransmissionFormInput: FC<TransmissionFormInputProps> = ({
         placeholder={placeholder}
         type={type}
         required
+        // disable for now as backend is in progress
+        disabled
       />
     )}
   </label>

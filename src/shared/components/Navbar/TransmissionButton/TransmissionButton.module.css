@@ -1,5 +1,4 @@
 .transmission-button {
-  border-color: var(--lightest-gray);
   box-shadow: 0 8px 28px 
   color-mix(in oklch, var(--lightest-gray) 18%, transparent);
   text-decoration: none;
@@ -27,6 +26,18 @@
 
 .transmission-button:hover {
   transform: translateX(2px);
+}
+
+.transmission-button-disabled {
+  background-color: var(--blood-red);
+  border: 1px solid var(--blood-red);
+  box-shadow: 0 8px 28px 
+  color-mix(in oklch, var(--blood-red) 18%, transparent);
+  text-decoration: none;
+}
+
+.transmission-button-disabled:hover {
+  transform: unset;
 }
 
 @media screen and (max-width: 959px) {

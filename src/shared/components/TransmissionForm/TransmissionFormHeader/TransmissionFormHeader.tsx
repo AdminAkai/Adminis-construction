@@ -12,7 +12,7 @@ const TransmissionFormHeader: FC = () => {
         CONTENT / {transmissionFormInputs.length} FIELDS
       </p>
       <p className={styles['transmission-form-header-title']}>
-        [CHANNEL <ScrambleText text='OPEN' startOnLoad />]
+        [CHANNEL <ScrambleText text='CLOSED' startOnLoad />]
       </p>
     </div>
   )

@@ -12,3 +12,7 @@
   text-shadow: 0 8px 28px 
   color-mix(in oklch, var(--orange) 18%, transparent);
 }
+
+.transmission-form-header-title span {
+  color: var(--blood-red);
+}

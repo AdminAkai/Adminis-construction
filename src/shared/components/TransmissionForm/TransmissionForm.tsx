@@ -28,7 +28,7 @@ const TransmissionForm: FC = () => {
           options={{ theme: 'dark', size: 'flexible' }}
         />
       </div>
-      <TransmissionButton style={{ alignSelf: 'flex-end' }} />
+      <TransmissionButton style={{ alignSelf: 'flex-end' }} disabled />
     </form>
   )
 }
