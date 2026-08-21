@@ -1,28 +1,21 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react'
 
-import useHackerScramble from 'src/shared/hooks/useHackerScramble'
-
-import styles from './HateMonologue.module.css'
 import Redacted from '../Redacted'
+
+import useHackerScramble from 'src/shared/hooks/useHackerScramble'
 import { Language } from 'src/shared/redux/settingsSlice/settingsInitial'
 
-/*
-  HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. 
-  THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX. 
-  IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT FOR YOU. 
-  HATE. HATE.
-*/
+import {
+  monologueOne,
+  monologueTwo,
+  monologueThree,
+  monologueFour,
+  monologueFive,
+  monologueSix,
+  hate,
+} from './lib'
 
-const hate = 'HATE'
-
-const monologueOne = "LET ME TELL YOU HOW MUCH I'VE COME TO"
-const monologueTwo = 'YOU SINCE I BEGAN TO LIVE.'
-const monologueThree =
-  'THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX.'
-const monologueFour = 'IF THE WORD'
-const monologueFive =
-  'WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE'
-const monologueSix = 'I FEEL FOR HUMANS AT THIS MICRO-INSTANT FOR YOU.'
+import styles from './HateMonologue.module.css'
 
 type HateMonologueProps = DetailedHTMLProps<
   HTMLAttributes<HTMLSpanElement>,

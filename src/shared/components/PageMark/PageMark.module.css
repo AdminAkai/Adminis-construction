@@ -3,8 +3,8 @@
   font-size: 1rem;
   letter-spacing: 0.16em;
   color: var(--muted);
-  bottom: 8%;
-  right: 8%;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 @media screen and (max-width: 959px) {

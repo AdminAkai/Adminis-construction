@@ -1,4 +1,10 @@
+.transmission-viewport {
+  width: 100%;
+  height: 100%;
+}
+
 .transmission {
+  position: relative;
   display: flex;
   justify-content: safe center;
   align-items: safe center;
@@ -48,26 +54,33 @@
 }
 
 @media screen and (max-width: 959px) {
+  .transmission-viewport {
+    height: 100%;
+    overflow-y: auto;
+  }
+
   .transmission {
     flex-direction: column;
-    min-height: 0;
-    height: 100%;
+    height: auto;
     min-height: 100%;
     font-size: 2rem;
-    overflow-y: auto;
+    padding-top: 80px;
   }
 
   .transmission-sector {
     width: 100%;
+    padding: 2rem 1rem;
   }
 
   .transmission-title {
     font-size: 12px;
+    padding: 0;
   }
 
   .transmission-subtitle {
     font-size: 1rem;
     height: auto;
+    padding: 0;
   }
 
   .transmission-links {

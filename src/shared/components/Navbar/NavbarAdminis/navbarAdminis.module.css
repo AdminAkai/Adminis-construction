@@ -15,6 +15,7 @@
 
 @media screen and (max-width: 959px) {
   .navbar-adminis {
-    display: none;
+    /* display: none; */
+    font-size: 12px;
   }
 }

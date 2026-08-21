@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 959px) {
   .transmission-form-header {
-    padding: 1rem 0;
+    padding: 0;
   }
 
   .transmission-form-header-title {

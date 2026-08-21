@@ -8,8 +8,11 @@ import TransmissionButton from '../Navbar/TransmissionButton'
 import { transmissionFormInputs, turnstileKey } from './lib'
 
 import styles from './TransmissionForm.module.css'
+import useMediaQuery from 'src/shared/hooks/useMediaQuery'
 
 const TransmissionForm: FC = () => {
+  const isMobile = useMediaQuery('(max-width: 959px)')
+
   const [turnstileToken, setTurnstileToken] = useState<string>('')
 
   return (
@@ -25,7 +28,7 @@ const TransmissionForm: FC = () => {
         <Turnstile
           siteKey={turnstileKey}
           onSuccess={setTurnstileToken}
-          options={{ theme: 'dark', size: 'flexible' }}
+          options={{ theme: 'dark', size: isMobile ? 'compact' : 'flexible' }}
         />
       </div>
       <TransmissionButton style={{ alignSelf: 'flex-end' }} disabled />

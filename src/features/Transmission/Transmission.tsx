@@ -1,9 +1,6 @@
 import { FC } from 'react'
 
-import { Link } from 'react-router-dom'
-
 import PageMark from 'src/shared/components/PageMark/PageMark'
-import Section from 'src/shared/components/Section/Section'
 import TransmissionFormHeader from 'src/shared/components/TransmissionForm/TransmissionFormHeader'
 import TransmissionForm from 'src/shared/components/TransmissionForm'
 
@@ -30,7 +27,7 @@ const Transmission: FC = () => {
   // }, [])
 
   return (
-    <Section>
+    <div className={styles['transmission-viewport']}>
       <div className={styles.transmission}>
         <div className={styles['transmission-sector']}>
           <h1 className={styles['transmission-title']}>
@@ -53,9 +50,9 @@ const Transmission: FC = () => {
           <TransmissionFormHeader />
           <TransmissionForm />
         </div>
+        <PageMark>TRANSMISSION / EP-OVA</PageMark>
       </div>
-      <PageMark>TRANSMISSION / EP-OVA</PageMark>
-    </Section>
+    </div>
   )
 }
 

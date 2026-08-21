@@ -1,8 +1,13 @@
-import { FC, PropsWithChildren } from 'react'
+import { DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren } from 'react'
 
 import styles from './PageMark.module.css'
 
-const PageMark: FC<PropsWithChildren> = ({ children, ...rest }) => {
+type PageMarkProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>
+
+const PageMark: FC<PageMarkProps> = ({ children, ...rest }) => {
   return (
     <div className={styles.mark} {...rest}>
       {children}
